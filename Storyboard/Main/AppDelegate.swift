@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let tabbarController = self.window!.rootViewController as UITabBarController
+        let navigationController = tabbarController.viewControllers?.first as UINavigationController
+        let controller = navigationController.topViewController as HomeViewController
+        controller.managedObjectContext = self.managedObjectContext
         return true
     }
 
@@ -105,6 +109,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    
+    // MARK: - ui appearance
+    func appearanceConfigure() {
+        
     }
 
 }
