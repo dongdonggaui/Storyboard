@@ -39,13 +39,19 @@ class TimeLineCell: UITableViewCell {
     }
 }
 
-class StoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class StoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TQTransitionProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    var transition: TQTransition?
+    var selectedIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let transition = TQTransition(navigationController: self.navigationController!)
+        self.navigationController!.delegate = transition
+        self.transition = transition
 
         self.segmentedControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -134,6 +140,10 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
             timeLineCell.descriptionLabel.text = description
             timeLineCell.tapAction = {
                 println("tapped at indexPath \(indexPath)")
+                self.selectedIndexPath = indexPath
+                let vc = GalleryViewController(nibName: "GalleryViewController", bundle: nil)
+                vc.image = timeLineCell.timeLineImageView.image
+                self.navigationController!.pushViewController(vc, animated: true)
             }
         }
     }
@@ -194,4 +204,10 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
 //    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 //        return 150.0
 //    }
+    
+    // MARK: - TQTransitionProtocol
+    func viewForTransition() -> UIView {
+        let cell = self.tableView.cellForRowAtIndexPath(self.selectedIndexPath!) as TimeLineCell
+        return cell.timeLineImageView
+    }
 }

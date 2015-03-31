@@ -15,7 +15,7 @@ import UIKit
 
 class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var navigationController: UINavigationController!
+    private var navigationController: UINavigationController
     private var fromView: UIView?
     private var toView: UIView?
     private var fromFrame: CGRect?

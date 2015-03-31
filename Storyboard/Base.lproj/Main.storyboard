@@ -6,10 +6,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Animated Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="VFk-Eq-h7w">
             <objects>
-                <tabBarController id="ag2-Ya-S0S" customClass="RAMAnimatedTabBarController" customModule="Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="ag2-Ya-S0S" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="T23-Jt-H9Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -30,15 +30,12 @@
         <scene sceneID="UOW-qr-c3Q">
             <objects>
                 <navigationController id="Wsc-QH-y4q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="icon_user" id="uFX-BM-Jf0" customClass="RAMAnimatedTabBarItem" customModule="Storyboard" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Item" image="icon_user" id="uFX-BM-Jf0">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="H7w-bl-c9R" id="PPB-iD-SJs"/>
-                        </connections>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2x-hN-mKk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -48,13 +45,6 @@
                         <segue destination="RTU-Ka-SVv" kind="relationship" relationship="rootViewController" id="69I-hq-UGX"/>
                     </connections>
                 </navigationController>
-                <customObject id="H7w-bl-c9R" customClass="RAMBounceAnimation" customModule="Storyboard" customModuleProvider="target">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                            <real key="value" value="0.40000000000000002"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1q8-tl-YNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-590" y="89"/>
@@ -82,15 +72,12 @@
         <scene sceneID="c2R-YB-CCM">
             <objects>
                 <navigationController id="mZp-jj-zUG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="drop" id="ROB-BZ-MwZ" customClass="RAMAnimatedTabBarItem" customModule="Storyboard" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Item" image="drop" id="ROB-BZ-MwZ">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="wRC-kw-7IN" id="kFR-XV-VRB"/>
-                        </connections>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c49-uh-yiT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -101,14 +88,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyD-xf-kUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="wRC-kw-7IN" customClass="RAMBounceAnimation" customModule="Storyboard" customModuleProvider="target">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                            <real key="value" value="0.40000000000000002"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
-                <customObject id="oL6-eW-BnX" customClass="TQViewTransition"/>
             </objects>
             <point key="canvasLocation" x="-590" y="-621"/>
         </scene>
@@ -506,15 +485,12 @@
         <scene sceneID="8wl-z6-dj3">
             <objects>
                 <navigationController id="CTh-Jf-xsU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Settings" id="P8T-m2-p63" customClass="RAMAnimatedTabBarItem" customModule="Storyboard" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Item" image="Settings" id="P8T-m2-p63">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="x4L-Cb-gq6" id="t24-BR-Qsb"/>
-                        </connections>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Wn-7f-2g7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -524,13 +500,6 @@
                         <segue destination="oo7-qC-av6" kind="relationship" relationship="rootViewController" id="SYo-Cb-HhO"/>
                     </connections>
                 </navigationController>
-                <customObject id="x4L-Cb-gq6" customClass="RAMBounceAnimation" customModule="Storyboard" customModuleProvider="target">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                            <real key="value" value="0.40000000000000002"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZX-Zj-SLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-590" y="811"/>
