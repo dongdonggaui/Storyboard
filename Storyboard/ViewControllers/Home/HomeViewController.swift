@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.navigationController?.view.backgroundColor = UIColor(white: 1, alpha: 1)
+        self.navigationController?.view.backgroundColor = UIColor.whiteColor()
     }
     
     override func viewDidLoad() {
@@ -119,7 +119,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
         let homeCell = cell as HomeTableViewCell
         let time = object.valueForKey("timeStamp")!.description
-        homeCell.homeTitleLabel!.text = String(format: "第\(indexPath.row + 1)天 马尔代夫 \(time)", Int(), String())
+        homeCell.homeTitleLabel!.text = String(format: "马尔代夫 \(time)", String())
         let imageName: String = String(format: "pl\((indexPath.row + 1) % 5).jpg", Int())
         homeCell.homeImageView!.image = UIImage(named:imageName)
     }
