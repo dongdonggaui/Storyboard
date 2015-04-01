@@ -120,6 +120,7 @@ public class PRSlideView: UIScrollView {
             self.willResize()
             
             super.frame = newValue
+            println("super view frame -> \(self.superview?.frame)")
             
             self.didResize()
         }
@@ -267,7 +268,7 @@ public class PRSlideView: UIScrollView {
     
     func didScrollToPageAtIndex(index: Int) {
         let delegate = self.delegate as? PRSlideViewDelegate
-        if delegate?.respondsToSelector("slideView:didScrollToPageAtIndex:") != nil {
+        if delegate?.respondsToSelector("slideView:didScrollToPageAtIndex:") == true {
             delegate?.slideView!(self, didScrollToPageAtIndex: self.indexForActualIndex(index))
         }
         let offset: Int = index == 0 ? 1 : 0
@@ -360,7 +361,7 @@ public class PRSlideView: UIScrollView {
         self.pagingEnabled = true
         self.showsHorizontalScrollIndicator = false
         self.showsVerticalScrollIndicator = false
-        self.clipsToBounds = false
+        self.clipsToBounds = true
         self.scrollsToTop = false
     }
     
@@ -378,6 +379,15 @@ public class PRSlideView: UIScrollView {
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    // MARK: - override
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if !self.isResizing {
+            self.resizeContent()
+        }
     }
 }
 // 版权属于原作者

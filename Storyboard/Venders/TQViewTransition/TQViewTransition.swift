@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-@objc protocol TQTransitionProtocol {
+@objc protocol TQTransitionDelegate {
     func viewForTransition() -> UIView
+    optional func pinchCancelled()
 }
 
 class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
@@ -51,10 +52,10 @@ class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimat
         toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey);
         
         if let viewController = toViewController {
-            toView = (viewController as TQTransitionProtocol).viewForTransition()
+            toView = (viewController as TQTransitionDelegate).viewForTransition()
         }
         if let viewController = fromViewController {
-            fromView = (viewController as TQTransitionProtocol).viewForTransition()
+            fromView = (viewController as TQTransitionDelegate).viewForTransition()
         }
         
         // make sure toViewController is layed out
@@ -224,6 +225,12 @@ class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimat
             if (cancelAnimation){
                 animationFrame = fromFrame
                 cancelInteractiveTransition()
+                if fromViewController != nil {
+                    var fromVc = fromViewController
+                    if fromVc!.respondsToSelector("pinchCancelled") {
+                        (fromVc as TQTransitionDelegate).pinchCancelled!()
+                    }
+                }
             } else {
                 finishInteractiveTransition()
             }
@@ -297,7 +304,7 @@ class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimat
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if (fromVC.conformsToProtocol(TQTransitionProtocol) && toVC.conformsToProtocol(TQTransitionProtocol)){
+        if (fromVC.conformsToProtocol(TQTransitionDelegate) && toVC.conformsToProtocol(TQTransitionDelegate)){
             return self
         }
         

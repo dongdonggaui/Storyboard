@@ -39,7 +39,7 @@ class TimeLineCell: UITableViewCell {
     }
 }
 
-class StoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TQTransitionProtocol {
+class StoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TQTransitionDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -143,6 +143,8 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.selectedIndexPath = indexPath
                 let vc = GalleryViewController(nibName: "GalleryViewController", bundle: nil)
                 vc.image = timeLineCell.timeLineImageView.image
+                vc.currentImageIndex = indexPath.row
+                vc.totalImageCount = 5
                 self.navigationController!.pushViewController(vc, animated: true)
             }
         }
@@ -205,9 +207,13 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        return 150.0
 //    }
     
-    // MARK: - TQTransitionProtocol
+    // MARK: - TQTransitionDelegate
     func viewForTransition() -> UIView {
         let cell = self.tableView.cellForRowAtIndexPath(self.selectedIndexPath!) as TimeLineCell
         return cell.timeLineImageView
+    }
+    
+    func pinchCancelled() {
+        
     }
 }

@@ -201,25 +201,25 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSA-hd-Dax" userLabel="time">
-                                                    <rect key="frame" x="26" y="325" width="33" height="16"/>
+                                                    <rect key="frame" x="26" y="360" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-ro-by3" userLabel="address">
-                                                    <rect key="frame" x="559" y="325" width="33" height="16"/>
+                                                    <rect key="frame" x="559" y="360" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="byV-4Y-U6H">
-                                                    <rect key="frame" x="26" y="8" width="566" height="283"/>
+                                                    <rect key="frame" x="26" y="8" width="566" height="318"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="byV-4Y-U6H" secondAttribute="height" multiplier="500:250" id="kkF-lt-xrY"/>
+                                                        <constraint firstAttribute="width" secondItem="byV-4Y-U6H" secondAttribute="height" multiplier="16:9" id="kkF-lt-xrY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="360" translatesAutoresizingMaskIntoConstraints="NO" id="D4Z-TP-rOH" userLabel="description">
-                                                    <rect key="frame" x="26" y="299" width="38" height="18"/>
+                                                    <rect key="frame" x="26" y="334" width="38" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

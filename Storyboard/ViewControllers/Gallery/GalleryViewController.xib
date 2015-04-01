@@ -2,11 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryViewController" customModule="Storyboard" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="azS-Ua-kfx" id="aci-o3-5yM"/>
                 <outlet property="slideView" destination="bya-8I-DgZ" id="ZE6-Oo-jPM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,17 +18,48 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="azS-Ua-kfx">
+                    <rect key="frame" x="0.0" y="131" width="600" height="338"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="azS-Ua-kfx" secondAttribute="height" multiplier="16:9" id="NZh-AI-7Pc"/>
+                    </constraints>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bya-8I-DgZ" customClass="PRSlideView" customModule="Storyboard" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ext-cx-qzY">
+                    <rect key="frame" x="0.0" y="567" width="600" height="33"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJr-mU-r42">
+                            <rect key="frame" x="8" y="8" width="584" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="VJr-mU-r42" firstAttribute="leading" secondItem="Ext-cx-qzY" secondAttribute="leading" constant="8" id="0JT-h1-qKF"/>
+                        <constraint firstAttribute="bottom" secondItem="VJr-mU-r42" secondAttribute="bottom" constant="8" id="ETh-XD-7in"/>
+                        <constraint firstAttribute="trailing" secondItem="VJr-mU-r42" secondAttribute="trailing" constant="8" id="JBn-1s-W03"/>
+                        <constraint firstItem="VJr-mU-r42" firstAttribute="top" secondItem="Ext-cx-qzY" secondAttribute="top" constant="8" id="Vef-1M-Xac"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="nvW-od-gBM"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="bya-8I-DgZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3Hc-U4-Pna"/>
+                <constraint firstItem="bya-8I-DgZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8uN-Db-S3y"/>
+                <constraint firstItem="bya-8I-DgZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="C5b-kw-9oZ"/>
+                <constraint firstItem="Ext-cx-qzY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J6a-GG-ilg"/>
+                <constraint firstAttribute="trailing" secondItem="Ext-cx-qzY" secondAttribute="trailing" id="Ozk-qn-c1V"/>
                 <constraint firstAttribute="bottom" secondItem="bya-8I-DgZ" secondAttribute="bottom" id="Wah-1c-Pij"/>
-                <constraint firstItem="bya-8I-DgZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kgV-MW-wte"/>
+                <constraint firstAttribute="trailing" secondItem="azS-Ua-kfx" secondAttribute="trailing" id="cv0-wo-S2V"/>
+                <constraint firstAttribute="centerY" secondItem="azS-Ua-kfx" secondAttribute="centerY" id="gbP-Mp-UTS"/>
+                <constraint firstAttribute="bottom" secondItem="Ext-cx-qzY" secondAttribute="bottom" id="sKL-hw-rjd"/>
                 <constraint firstAttribute="trailing" secondItem="bya-8I-DgZ" secondAttribute="trailing" id="tAJ-Fx-7SI"/>
+                <constraint firstItem="azS-Ua-kfx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zRT-Ny-MrW"/>
             </constraints>
         </view>
     </objects>
