@@ -34,6 +34,14 @@
 		0925832B1AC9522B0026AECA /* pl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092583261AC9522B0026AECA /* pl2.jpg */; };
 		0925832E1AC9522B0026AECA /* pl5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092583291AC9522B0026AECA /* pl5.jpg */; };
 		092583311AC952C60026AECA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092583301AC952C60026AECA /* HomeViewController.swift */; };
+		097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */; };
+		097C469C1AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 097C46981AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg */; };
+		097C469D1AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 097C46991AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 */; };
+		097C469E1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 097C469A1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg */; };
+		097C469F1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 097C469B1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 */; };
+		097C46AA1AD4D7E500AB77B2 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A21AD4D7E500AB77B2 /* ALView+PureLayout.m */; };
+		097C46AB1AD4D7E500AB77B2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A41AD4D7E500AB77B2 /* NSArray+PureLayout.m */; };
+		097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A61AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m */; };
 		09C115651ACA5D6B002E40FF /* pl_wuhan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C115641ACA5D6B002E40FF /* pl_wuhan.jpg */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +87,21 @@
 		092583261AC9522B0026AECA /* pl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl2.jpg; sourceTree = "<group>"; };
 		092583291AC9522B0026AECA /* pl5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl5.jpg; sourceTree = "<group>"; };
 		092583301AC952C60026AECA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		097C46981AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10411608041575417ed67610.jpg; sourceTree = "<group>"; };
+		097C46991AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10411608041575417ed67610.mp4; sourceTree = "<group>"; };
+		097C469A1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10465908041575417ed94771.jpg; sourceTree = "<group>"; };
+		097C469B1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10465908041575417ed94771.mp4; sourceTree = "<group>"; };
+		097C46A11AD4D7E500AB77B2 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		097C46A21AD4D7E500AB77B2 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		097C46A31AD4D7E500AB77B2 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		097C46A41AD4D7E500AB77B2 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		097C46A51AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		097C46A61AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		097C46A71AD4D7E500AB77B2 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		097C46A81AD4D7E500AB77B2 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		097C46A91AD4D7E500AB77B2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		097C46B01AD4D85700AB77B2 /* SwfitOCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwfitOCBridge.h; sourceTree = "<group>"; };
 		09C115641ACA5D6B002E40FF /* pl_wuhan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl_wuhan.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +144,7 @@
 		091A2F501ACA8E930014D07C /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				097C46A01AD4D7E500AB77B2 /* PureLayout */,
 				091A2F511ACA8E930014D07C /* PRSlideView */,
 				091A2F591ACAC31A0014D07C /* RAMAnimatedTabBarController */,
 				091A2F561ACA9F4F0014D07C /* TQViewTransition */,
@@ -271,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				0925831D1AC94D170026AECA /* AppDelegate.swift */,
+				097C46B01AD4D85700AB77B2 /* SwfitOCBridge.h */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -285,6 +310,7 @@
 		092583201AC94D260026AECA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				097C46941AD4BE2100AB77B2 /* Media */,
 				090813531AC96BFD006C19FA /* Story */,
 				0925832F1AC952B80026AECA /* Home */,
 				06092BE01ACADCCC00FF320C /* Gallery */,
@@ -296,6 +322,7 @@
 		092583231AC9522B0026AECA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				097C46971AD4CF9A00AB77B2 /* Videos */,
 				092583241AC9522B0026AECA /* Images */,
 			);
 			path = Resources;
@@ -320,6 +347,41 @@
 				092583301AC952C60026AECA /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		097C46941AD4BE2100AB77B2 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		097C46971AD4CF9A00AB77B2 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				097C46981AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg */,
+				097C46991AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 */,
+				097C469A1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg */,
+				097C469B1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		097C46A01AD4D7E500AB77B2 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				097C46A11AD4D7E500AB77B2 /* ALView+PureLayout.h */,
+				097C46A21AD4D7E500AB77B2 /* ALView+PureLayout.m */,
+				097C46A31AD4D7E500AB77B2 /* NSArray+PureLayout.h */,
+				097C46A41AD4D7E500AB77B2 /* NSArray+PureLayout.m */,
+				097C46A51AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.h */,
+				097C46A61AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m */,
+				097C46A71AD4D7E500AB77B2 /* PureLayout+Internal.h */,
+				097C46A81AD4D7E500AB77B2 /* PureLayout.h */,
+				097C46A91AD4D7E500AB77B2 /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,13 +467,17 @@
 				090813521AC96540006C19FA /* pl4.jpg in Resources */,
 				09C115651ACA5D6B002E40FF /* pl_wuhan.jpg in Resources */,
 				092582FE1AC94A940026AECA /* Main.storyboard in Resources */,
+				097C469C1AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg in Resources */,
 				092583031AC94A940026AECA /* LaunchScreen.xib in Resources */,
 				0925832B1AC9522B0026AECA /* pl2.jpg in Resources */,
 				06092BE41ACADD0100FF320C /* GalleryViewController.xib in Resources */,
+				097C469E1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg in Resources */,
 				090813511AC96540006C19FA /* pl3.jpg in Resources */,
 				092583001AC94A940026AECA /* Images.xcassets in Resources */,
 				0925832A1AC9522B0026AECA /* pl1.jpg in Resources */,
+				097C469F1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 in Resources */,
 				0925832E1AC9522B0026AECA /* pl5.jpg in Resources */,
+				097C469D1AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +497,9 @@
 			files = (
 				091A2F671ACAC31A0014D07C /* RAMBounceAnimation.swift in Sources */,
 				091A2F541ACA8E930014D07C /* PRSlideView.swift in Sources */,
+				097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */,
 				090813551AC96C07006C19FA /* StoryViewController.swift in Sources */,
+				097C46AB1AD4D7E500AB77B2 /* NSArray+PureLayout.m in Sources */,
 				092583221AC94D260026AECA /* ViewController.swift in Sources */,
 				0925831F1AC94D170026AECA /* AppDelegate.swift in Sources */,
 				06092BE31ACADD0100FF320C /* GalleryViewController.swift in Sources */,
@@ -441,9 +509,11 @@
 				091A2F581ACA9F610014D07C /* TQViewTransition.swift in Sources */,
 				091A2F6B1ACAC31A0014D07C /* RAMTransitionItemAnimation.swift in Sources */,
 				092582F91AC94A940026AECA /* Storyboard.xcdatamodeld in Sources */,
+				097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				092583311AC952C60026AECA /* HomeViewController.swift in Sources */,
 				091A2F681ACAC31A0014D07C /* RAMFrameItemAnimation.swift in Sources */,
 				091A2F691ACAC31A0014D07C /* RAMFumeAnimation.swift in Sources */,
+				097C46AA1AD4D7E500AB77B2 /* ALView+PureLayout.m in Sources */,
 				091A2F551ACA8E930014D07C /* PRSlideViewPage.swift in Sources */,
 				091A2F6D1ACAC31A0014D07C /* RAMItemAnimationProtocol.swift in Sources */,
 			);
@@ -574,6 +644,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
 			name = Debug;
 		};
@@ -585,6 +656,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
 			name = Release;
 		};
