@@ -196,4 +196,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
     }
+    
+    // MARK: - scroll view delegate
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offset = scrollView.contentOffset.y
+        if offset <= -200 {
+            let vc: SmallVideoCaptureViewController = SmallVideoCaptureViewController(nibName: "SmallVideoCaptureViewController", bundle: nil)
+            let nc: UINavigationController = UINavigationController(rootViewController: vc)
+            self.presentViewController(nc, animated: true, completion: nil)
+        }
+    }
 }

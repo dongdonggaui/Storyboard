@@ -43,6 +43,9 @@
 		097C46AB1AD4D7E500AB77B2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A41AD4D7E500AB77B2 /* NSArray+PureLayout.m */; };
 		097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A61AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m */; };
 		09C115651ACA5D6B002E40FF /* pl_wuhan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C115641ACA5D6B002E40FF /* pl_wuhan.jpg */; };
+		09F88C771AD611A50096DAA2 /* SmallVideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */; };
+		09F88C781AD611A50096DAA2 /* SmallVideoCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F88C761AD611A50096DAA2 /* SmallVideoCaptureViewController.xib */; };
+		09F88C7C1AD61A510096DAA2 /* TQTwoSideProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F88C7B1AD61A510096DAA2 /* TQTwoSideProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		097C46A91AD4D7E500AB77B2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		097C46B01AD4D85700AB77B2 /* SwfitOCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwfitOCBridge.h; sourceTree = "<group>"; };
 		09C115641ACA5D6B002E40FF /* pl_wuhan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl_wuhan.jpg; sourceTree = "<group>"; };
+		09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallVideoCaptureViewController.swift; sourceTree = "<group>"; };
+		09F88C761AD611A50096DAA2 /* SmallVideoCaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallVideoCaptureViewController.xib; sourceTree = "<group>"; };
+		09F88C7B1AD61A510096DAA2 /* TQTwoSideProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQTwoSideProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +261,7 @@
 				0925831C1AC94D170026AECA /* Main */,
 				091A2F501ACA8E930014D07C /* Venders */,
 				092583201AC94D260026AECA /* ViewControllers */,
+				09F88C791AD61A120096DAA2 /* Views */,
 				0925831E1AC94D170026AECA /* Services */,
 				092583231AC9522B0026AECA /* Resources */,
 				092582FC1AC94A940026AECA /* Main.storyboard */,
@@ -353,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */,
+				09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */,
+				09F88C761AD611A50096DAA2 /* SmallVideoCaptureViewController.xib */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -382,6 +391,22 @@
 				097C46A91AD4D7E500AB77B2 /* PureLayoutDefines.h */,
 			);
 			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		09F88C791AD61A120096DAA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09F88C7A1AD61A2D0096DAA2 /* Controls */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09F88C7A1AD61A2D0096DAA2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				09F88C7B1AD61A510096DAA2 /* TQTwoSideProgressBar.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +498,7 @@
 				06092BE41ACADD0100FF320C /* GalleryViewController.xib in Resources */,
 				097C469E1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg in Resources */,
 				090813511AC96540006C19FA /* pl3.jpg in Resources */,
+				09F88C781AD611A50096DAA2 /* SmallVideoCaptureViewController.xib in Resources */,
 				092583001AC94A940026AECA /* Images.xcassets in Resources */,
 				0925832A1AC9522B0026AECA /* pl1.jpg in Resources */,
 				097C469F1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 in Resources */,
@@ -496,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				091A2F671ACAC31A0014D07C /* RAMBounceAnimation.swift in Sources */,
+				09F88C771AD611A50096DAA2 /* SmallVideoCaptureViewController.swift in Sources */,
 				091A2F541ACA8E930014D07C /* PRSlideView.swift in Sources */,
 				097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */,
 				090813551AC96C07006C19FA /* StoryViewController.swift in Sources */,
@@ -511,6 +538,7 @@
 				092582F91AC94A940026AECA /* Storyboard.xcdatamodeld in Sources */,
 				097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				092583311AC952C60026AECA /* HomeViewController.swift in Sources */,
+				09F88C7C1AD61A510096DAA2 /* TQTwoSideProgressBar.swift in Sources */,
 				091A2F681ACAC31A0014D07C /* RAMFrameItemAnimation.swift in Sources */,
 				091A2F691ACAC31A0014D07C /* RAMFumeAnimation.swift in Sources */,
 				097C46AA1AD4D7E500AB77B2 /* ALView+PureLayout.m in Sources */,
