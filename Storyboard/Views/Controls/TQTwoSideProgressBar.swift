@@ -27,7 +27,9 @@ class TQTwoSideProgressBar: UIControl {
         super.init(frame: frame)
         
         foregroundView = UIView.newAutoLayoutView()
+        foregroundView.backgroundColor = UIColor.orangeColor()
         backgroundView = UIView.newAutoLayoutView()
+        backgroundView.backgroundColor = UIColor.lightGrayColor()
         
         addSubview(backgroundView)
         addSubview(foregroundView)

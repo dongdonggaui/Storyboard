@@ -53,8 +53,8 @@ class SmallVideoCaptureViewController: UIViewController, AVCaptureFileOutputReco
         
         //初始化会话
         captureSession = AVCaptureSession()
-        if captureSession!.canSetSessionPreset(AVCaptureSessionPreset640x480) {
-            captureSession!.sessionPreset = AVCaptureSessionPreset640x480
+        if captureSession!.canSetSessionPreset(AVCaptureSessionPresetLow) {
+            captureSession!.sessionPreset = AVCaptureSessionPresetLow
         }
         
         //获得输入设备

@@ -34,6 +34,15 @@
 		0925832B1AC9522B0026AECA /* pl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092583261AC9522B0026AECA /* pl2.jpg */; };
 		0925832E1AC9522B0026AECA /* pl5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092583291AC9522B0026AECA /* pl5.jpg */; };
 		092583311AC952C60026AECA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092583301AC952C60026AECA /* HomeViewController.swift */; };
+		096EB4451AD7BF42009E765C /* RosyWriterCapturePipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EB4371AD7BF42009E765C /* RosyWriterCapturePipeline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		096EB4461AD7BF42009E765C /* RosyWriterOpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EB4391AD7BF42009E765C /* RosyWriterOpenGLRenderer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		096EB4471AD7BF42009E765C /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 096EB43D1AD7BF42009E765C /* matrix.c */; };
+		096EB4481AD7BF42009E765C /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 096EB43F1AD7BF42009E765C /* ShaderUtilities.c */; };
+		096EB4491AD7BF42009E765C /* MovieRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EB4421AD7BF42009E765C /* MovieRecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		096EB44A1AD7BF42009E765C /* OpenGLPixelBufferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EB4441AD7BF42009E765C /* OpenGLPixelBufferView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		096EB44E1AD7BFD0009E765C /* myFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 096EB44C1AD7BFD0009E765C /* myFilter.fsh */; };
+		096EB44F1AD7BFD0009E765C /* myFilter.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 096EB44D1AD7BFD0009E765C /* myFilter.vsh */; };
+		096EB4531AD7C167009E765C /* TinyVideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096EB4521AD7C167009E765C /* TinyVideoCaptureViewController.swift */; };
 		097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */; };
 		097C469C1AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 097C46981AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg */; };
 		097C469D1AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 097C46991AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 */; };
@@ -90,6 +99,22 @@
 		092583261AC9522B0026AECA /* pl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl2.jpg; sourceTree = "<group>"; };
 		092583291AC9522B0026AECA /* pl5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl5.jpg; sourceTree = "<group>"; };
 		092583301AC952C60026AECA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		096EB4361AD7BF42009E765C /* RosyWriterCapturePipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosyWriterCapturePipeline.h; sourceTree = "<group>"; };
+		096EB4371AD7BF42009E765C /* RosyWriterCapturePipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosyWriterCapturePipeline.m; sourceTree = "<group>"; };
+		096EB4381AD7BF42009E765C /* RosyWriterOpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosyWriterOpenGLRenderer.h; sourceTree = "<group>"; };
+		096EB4391AD7BF42009E765C /* RosyWriterOpenGLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosyWriterOpenGLRenderer.m; sourceTree = "<group>"; };
+		096EB43A1AD7BF42009E765C /* RosyWriterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosyWriterRenderer.h; sourceTree = "<group>"; };
+		096EB43D1AD7BF42009E765C /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		096EB43E1AD7BF42009E765C /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		096EB43F1AD7BF42009E765C /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShaderUtilities.c; sourceTree = "<group>"; };
+		096EB4401AD7BF42009E765C /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtilities.h; sourceTree = "<group>"; };
+		096EB4411AD7BF42009E765C /* MovieRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieRecorder.h; sourceTree = "<group>"; };
+		096EB4421AD7BF42009E765C /* MovieRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieRecorder.m; sourceTree = "<group>"; };
+		096EB4431AD7BF42009E765C /* OpenGLPixelBufferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLPixelBufferView.h; sourceTree = "<group>"; };
+		096EB4441AD7BF42009E765C /* OpenGLPixelBufferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLPixelBufferView.m; sourceTree = "<group>"; };
+		096EB44C1AD7BFD0009E765C /* myFilter.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = myFilter.fsh; sourceTree = "<group>"; };
+		096EB44D1AD7BFD0009E765C /* myFilter.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = myFilter.vsh; sourceTree = "<group>"; };
+		096EB4521AD7C167009E765C /* TinyVideoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyVideoCaptureViewController.swift; sourceTree = "<group>"; };
 		097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		097C46981AD4CF9A00AB77B2 /* 10411608041575417ed67610.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10411608041575417ed67610.jpg; sourceTree = "<group>"; };
 		097C46991AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10411608041575417ed67610.mp4; sourceTree = "<group>"; };
@@ -150,6 +175,7 @@
 		091A2F501ACA8E930014D07C /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				096EB4351AD7BF42009E765C /* AppleVideoCapturer */,
 				097C46A01AD4D7E500AB77B2 /* PureLayout */,
 				091A2F511ACA8E930014D07C /* PRSlideView */,
 				091A2F591ACAC31A0014D07C /* RAMAnimatedTabBarController */,
@@ -356,10 +382,57 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		096EB4351AD7BF42009E765C /* AppleVideoCapturer */ = {
+			isa = PBXGroup;
+			children = (
+				096EB4361AD7BF42009E765C /* RosyWriterCapturePipeline.h */,
+				096EB4371AD7BF42009E765C /* RosyWriterCapturePipeline.m */,
+				096EB4381AD7BF42009E765C /* RosyWriterOpenGLRenderer.h */,
+				096EB4391AD7BF42009E765C /* RosyWriterOpenGLRenderer.m */,
+				096EB43A1AD7BF42009E765C /* RosyWriterRenderer.h */,
+				096EB44B1AD7BFD0009E765C /* Shaders */,
+				096EB43B1AD7BF42009E765C /* Utilities */,
+			);
+			path = AppleVideoCapturer;
+			sourceTree = "<group>";
+		};
+		096EB43B1AD7BF42009E765C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				096EB43C1AD7BF42009E765C /* GL */,
+				096EB4411AD7BF42009E765C /* MovieRecorder.h */,
+				096EB4421AD7BF42009E765C /* MovieRecorder.m */,
+				096EB4431AD7BF42009E765C /* OpenGLPixelBufferView.h */,
+				096EB4441AD7BF42009E765C /* OpenGLPixelBufferView.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		096EB43C1AD7BF42009E765C /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				096EB43D1AD7BF42009E765C /* matrix.c */,
+				096EB43E1AD7BF42009E765C /* matrix.h */,
+				096EB43F1AD7BF42009E765C /* ShaderUtilities.c */,
+				096EB4401AD7BF42009E765C /* ShaderUtilities.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		096EB44B1AD7BFD0009E765C /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				096EB44C1AD7BFD0009E765C /* myFilter.fsh */,
+				096EB44D1AD7BFD0009E765C /* myFilter.vsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		097C46941AD4BE2100AB77B2 /* Media */ = {
 			isa = PBXGroup;
 			children = (
 				097C46951AD4BE4C00AB77B2 /* VideoViewController.swift */,
+				096EB4521AD7C167009E765C /* TinyVideoCaptureViewController.swift */,
 				09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */,
 				09F88C761AD611A50096DAA2 /* SmallVideoCaptureViewController.xib */,
 			);
@@ -496,6 +569,7 @@
 				092583031AC94A940026AECA /* LaunchScreen.xib in Resources */,
 				0925832B1AC9522B0026AECA /* pl2.jpg in Resources */,
 				06092BE41ACADD0100FF320C /* GalleryViewController.xib in Resources */,
+				096EB44E1AD7BFD0009E765C /* myFilter.fsh in Resources */,
 				097C469E1AD4CF9A00AB77B2 /* 10465908041575417ed94771.jpg in Resources */,
 				090813511AC96540006C19FA /* pl3.jpg in Resources */,
 				09F88C781AD611A50096DAA2 /* SmallVideoCaptureViewController.xib in Resources */,
@@ -503,6 +577,7 @@
 				0925832A1AC9522B0026AECA /* pl1.jpg in Resources */,
 				097C469F1AD4CF9A00AB77B2 /* 10465908041575417ed94771.mp4 in Resources */,
 				0925832E1AC9522B0026AECA /* pl5.jpg in Resources */,
+				096EB44F1AD7BFD0009E765C /* myFilter.vsh in Resources */,
 				097C469D1AD4CF9A00AB77B2 /* 10411608041575417ed67610.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +598,7 @@
 			files = (
 				091A2F671ACAC31A0014D07C /* RAMBounceAnimation.swift in Sources */,
 				09F88C771AD611A50096DAA2 /* SmallVideoCaptureViewController.swift in Sources */,
+				096EB4451AD7BF42009E765C /* RosyWriterCapturePipeline.m in Sources */,
 				091A2F541ACA8E930014D07C /* PRSlideView.swift in Sources */,
 				097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */,
 				090813551AC96C07006C19FA /* StoryViewController.swift in Sources */,
@@ -531,19 +607,25 @@
 				0925831F1AC94D170026AECA /* AppDelegate.swift in Sources */,
 				06092BE31ACADD0100FF320C /* GalleryViewController.swift in Sources */,
 				06092BE61ACAFD1300FF320C /* GalleryPage.swift in Sources */,
+				096EB4531AD7C167009E765C /* TinyVideoCaptureViewController.swift in Sources */,
 				091A2F6C1ACAC31A0014D07C /* RAMAnimatedTabBarController.swift in Sources */,
+				096EB4471AD7BF42009E765C /* matrix.c in Sources */,
 				091A2F6A1ACAC31A0014D07C /* RAMRotationAnimation.swift in Sources */,
+				096EB44A1AD7BF42009E765C /* OpenGLPixelBufferView.m in Sources */,
 				091A2F581ACA9F610014D07C /* TQViewTransition.swift in Sources */,
 				091A2F6B1ACAC31A0014D07C /* RAMTransitionItemAnimation.swift in Sources */,
 				092582F91AC94A940026AECA /* Storyboard.xcdatamodeld in Sources */,
 				097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				092583311AC952C60026AECA /* HomeViewController.swift in Sources */,
 				09F88C7C1AD61A510096DAA2 /* TQTwoSideProgressBar.swift in Sources */,
+				096EB4491AD7BF42009E765C /* MovieRecorder.m in Sources */,
 				091A2F681ACAC31A0014D07C /* RAMFrameItemAnimation.swift in Sources */,
 				091A2F691ACAC31A0014D07C /* RAMFumeAnimation.swift in Sources */,
 				097C46AA1AD4D7E500AB77B2 /* ALView+PureLayout.m in Sources */,
 				091A2F551ACA8E930014D07C /* PRSlideViewPage.swift in Sources */,
+				096EB4461AD7BF42009E765C /* RosyWriterOpenGLRenderer.m in Sources */,
 				091A2F6D1ACAC31A0014D07C /* RAMItemAnimationProtocol.swift in Sources */,
+				096EB4481AD7BF42009E765C /* ShaderUtilities.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +753,7 @@
 				INFOPLIST_FILE = Storyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
@@ -683,6 +766,7 @@
 				INFOPLIST_FILE = Storyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};

@@ -10,7 +10,7 @@
             <connections>
                 <outlet property="captureButton" destination="5LU-0p-u87" id="eRs-bd-umo"/>
                 <outlet property="focusCusor" destination="dcX-gw-onz" id="rjc-u8-Zch"/>
-                <outlet property="previewView" destination="AY9-cC-K3y" id="QSF-6o-iJU"/>
+                <outlet property="previewViewContainer" destination="AY9-cC-K3y" id="qEn-Lq-YQf"/>
                 <outlet property="progressBar" destination="I6f-D7-it6" id="oDo-ey-p8D"/>
                 <outlet property="promptLabel" destination="tYz-aW-yZX" id="hVP-b9-R3M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

@@ -10,5 +10,7 @@
 #define Storyboard_SwfitOCBridge_h
 
 #import "PureLayout.h"
+#import "RosyWriterCapturePipeline.h"
+#import "OpenGLPixelBufferView.h"
 
 #endif
