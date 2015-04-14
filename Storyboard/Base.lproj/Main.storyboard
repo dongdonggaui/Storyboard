@@ -30,13 +30,7 @@
         <scene sceneID="UOW-qr-c3Q">
             <objects>
                 <navigationController id="Wsc-QH-y4q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="icon_user" id="uFX-BM-Jf0">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Item" image="icon_user" id="uFX-BM-Jf0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2x-hN-mKk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -72,13 +66,7 @@
         <scene sceneID="c2R-YB-CCM">
             <objects>
                 <navigationController id="mZp-jj-zUG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="drop" id="ROB-BZ-MwZ">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Item" image="drop" id="ROB-BZ-MwZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c49-uh-yiT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -492,13 +480,7 @@
         <scene sceneID="8wl-z6-dj3">
             <objects>
                 <navigationController id="CTh-Jf-xsU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Settings" id="P8T-m2-p63">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Item" image="Settings" id="P8T-m2-p63"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Wn-7f-2g7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

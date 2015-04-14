@@ -31,6 +31,7 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
     var addedObservers = false
     var recording = false
     var backgroundRecordingID: UIBackgroundTaskIdentifier?
+    var didSetupTransform = false
     
     var saveToDisk: Bool = false
     var recordCompleted: Bool = false
@@ -41,6 +42,7 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+        UIDevice.currentDevice().endGeneratingDeviceOrientationNotifications()
     }
     
     override func viewDidLoad() {
@@ -52,7 +54,7 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "deviceOrientationDidChange", name: UIDeviceOrientationDidChangeNotification, object: UIDevice.currentDevice())
         
         // Keep track of changes to the device orientation so we can update the capture pipeline
-//        UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
+        UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
         
         addedObservers = true
         
@@ -66,9 +68,6 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
     }
     
     override func updateViewConstraints() {
-        if !didSetupConstraints {
-            previewView!.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsZero)
-        }
         
         super.updateViewConstraints()
     }
@@ -98,7 +97,11 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - lifecycle
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientationMask.Portrait.rawValue.hashValue
+    }
+    
+    // MARK: - notification
     func applicationDidEnterBackground() {
         // Avoid using the GPU in the background
         allowedToUseGPU = false
@@ -115,6 +118,13 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
         capturePipeline!.renderingEnabled = true
     }
     
+    func deviceOrientationDidChange() {
+        let deviceOrientation = UIDevice.currentDevice().orientation
+        if UIDeviceOrientationIsPortrait(deviceOrientation) || UIDeviceOrientationIsLandscape(deviceOrientation) {
+            capturePipeline!.recordingOrientation = AVCaptureVideoOrientation(rawValue: deviceOrientation.rawValue)!
+        }
+    }
+    
     // MARK: - private
     func setupUI() {
         let cancelItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelButtonDidTapped")
@@ -129,13 +139,19 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
         promptLabel.alpha = 0
         promptLabel.font = UIFont.systemFontOfSize(14)
         resetProgressBar()
-        
+    }
+    
+    func setupPreviewView() {
         previewView = OpenGLPixelBufferView(forAutoLayout: ())
-        let currentInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
-        previewView!.transform = capturePipeline!.transformFromVideoBufferOrientationToOrientation(AVCaptureVideoOrientation(rawValue: currentInterfaceOrientation.rawValue)!, withAutoMirroring: true)
         previewView!.backgroundColor = UIColor(white: 0, alpha: 0.9)
+        var currentInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+        previewView!.transform = capturePipeline!.transformFromVideoBufferOrientationToOrientation(AVCaptureVideoOrientation(rawValue: currentInterfaceOrientation.rawValue)!, withAutoMirroring: true)
         previewViewContainer.insertSubview(previewView!, belowSubview: promptLabel)
-        self.view.setNeedsUpdateConstraints()
+        
+        var bounds = CGRectZero
+        bounds.size = previewViewContainer!.convertRect(previewViewContainer!.bounds, toView: previewView!).size
+        previewView!.bounds = bounds
+        previewView!.center = CGPointMake(previewViewContainer!.bounds.size.width/2.0, previewViewContainer!.bounds.size.height/2.0)
     }
     
     func showCancelPrompt() {
@@ -267,6 +283,11 @@ class SmallVideoCaptureViewController: UIViewController, RosyWriterCapturePipeli
     func capturePipeline(capturePipeline: RosyWriterCapturePipeline!, previewPixelBufferReadyForDisplay previewPixelBuffer: CVPixelBuffer!) {
         if !allowedToUseGPU {
             return
+        }
+        
+        // must set transform at here or the rotation will wrong
+        if previewView == nil {
+            setupPreviewView()
         }
         
         previewView!.displayPixelBuffer(previewPixelBuffer)
