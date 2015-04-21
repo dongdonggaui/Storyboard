@@ -52,10 +52,10 @@ class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimat
         toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey);
         
         if let viewController = toViewController {
-            toView = (viewController as TQTransitionDelegate).viewForTransition()
+            toView = (viewController as! TQTransitionDelegate).viewForTransition()
         }
         if let viewController = fromViewController {
-            fromView = (viewController as TQTransitionDelegate).viewForTransition()
+            fromView = (viewController as! TQTransitionDelegate).viewForTransition()
         }
         
         // make sure toViewController is layed out
@@ -82,7 +82,7 @@ class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimat
         
         // Create a copy of the fromView and add it to the Transition Container
         if (fromView?.isKindOfClass(UIImageView.classForCoder()) != nil){
-            transitionView = UIImageView(image: (fromView as UIImageView).image)
+            transitionView = UIImageView(image: (fromView as! UIImageView).image)
         } else {
             transitionView = fromView?.snapshotViewAfterScreenUpdates(false);
         }
@@ -228,7 +228,7 @@ class TQTransition: UIPercentDrivenInteractiveTransition, UIViewControllerAnimat
                 if fromViewController != nil {
                     var fromVc = fromViewController
                     if fromVc!.respondsToSelector("pinchCancelled") {
-                        (fromVc as TQTransitionDelegate).pinchCancelled!()
+                        (fromVc as! TQTransitionDelegate).pinchCancelled!()
                     }
                 }
             } else {

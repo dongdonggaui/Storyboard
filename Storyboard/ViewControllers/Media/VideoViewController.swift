@@ -65,7 +65,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func setupPlayers() {
         for playerItem in playerItems {
-            let player: AVPlayer! = AVPlayer.playerWithPlayerItem(playerItem) as AVPlayer
+            let player: AVPlayer = AVPlayer.playerWithPlayerItem(playerItem) as! AVPlayer
             player.volume = 0
             players.append(player as AVPlayer)
         }
@@ -94,7 +94,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func playbackFinished(notification: NSNotification) {
-        let item = notification.object as AVPlayerItem
+        let item = notification.object as! AVPlayerItem
         item.seekToTime(kCMTimeZero)
         var index: Int = 0
         for var i = 0; i < playerItems.count; i++ {
@@ -131,7 +131,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -173,7 +173,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         let playerLayer = playerLayers[indexPath.row] as AVPlayerLayer
         var hasPlayerLayer = false
         for layer in cell.contentView.layer.sublayers {
-            if layer as CALayer == playerLayer {
+            if layer as! CALayer == playerLayer {
                 hasPlayerLayer = true
                 break
             }

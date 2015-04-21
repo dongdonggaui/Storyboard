@@ -134,7 +134,7 @@ class GalleryViewController: UIViewController, TQTransitionDelegate, PRSlideView
     }
     
     func slideView(slideView: PRSlideView, pageAtIndex index: Int) -> PRSlideViewPage {
-        let page: GalleryPage = slideView.dequeueReusablePageWithIdentifier(GalleryPage.description(), index: index) as GalleryPage
+        let page: GalleryPage = slideView.dequeueReusablePageWithIdentifier(GalleryPage.description(), index: index) as! GalleryPage
         
 //        let imageName: String = self.albumData[index].stringByAppendingPathExtension("jpg")!
         page.coverImageView.image = image

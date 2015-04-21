@@ -83,8 +83,8 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let identifier: NSString = self.segmentedControl.selectedSegmentIndex == 0 ? "TimeLineCell" : "CategoryCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as UITableViewCell
+        let identifier: String = self.segmentedControl.selectedSegmentIndex == 0 ? "TimeLineCell" : "CategoryCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -120,7 +120,7 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         } else {
-            let timeLineCell = cell as TimeLineCell
+            let timeLineCell = cell as! TimeLineCell
             let time = NSDate().description
             timeLineCell.timeLabel.text = time;
             timeLineCell.selectionStyle = UITableViewCellSelectionStyle.None
@@ -152,7 +152,7 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if self.segmentedControl.selectedSegmentIndex == 0 {
-            var view: UITableViewHeaderFooterView? = (tableView.dequeueReusableHeaderFooterViewWithIdentifier("header") as UITableViewHeaderFooterView)
+            var view: UITableViewHeaderFooterView? = (tableView.dequeueReusableHeaderFooterViewWithIdentifier("header") as! UITableViewHeaderFooterView)
             
             let viewWidth = CGRectGetWidth(tableView.frame)
             let viewHeight: CGFloat = 30
@@ -209,7 +209,7 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - TQTransitionDelegate
     func viewForTransition() -> UIView {
-        let cell = self.tableView.cellForRowAtIndexPath(self.selectedIndexPath!) as TimeLineCell
+        let cell = self.tableView.cellForRowAtIndexPath(self.selectedIndexPath!) as! TimeLineCell
         return cell.timeLineImageView
     }
     

@@ -73,7 +73,7 @@ class TinyVideoCaptureViewController: UIViewController {
         self.view.addSubview(containerView)
         inferiorContainerView = containerView
         
-        var button = UIButton.buttonWithType(.Custom) as UIButton
+        var button = UIButton.buttonWithType(.Custom) as! UIButton
         button.setTranslatesAutoresizingMaskIntoConstraints(false)
         button.clipsToBounds = true
         button.layer.cornerRadius = CGFloat(captureButtonWidth) * 0.5
