@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Storyboard For Reveal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Storyboard.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>092583071AC94A940026AECA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09552B881B1C389D006B685D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

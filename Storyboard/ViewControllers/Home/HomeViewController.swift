@@ -50,28 +50,34 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //                let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
 //                (segue.destinationViewController as DetailViewController).detailItem = object
 //            }
+        } else if segue.identifier == "showAdd" {
+            if let vc = segue.destinationViewController as? AddNewAlbumViewController {
+                var vm = AddNewAlbumViewModel()
+                vc.viewModel = vm
+            }
         }
     }
     
     // MARK: - private
     
     func insertNewObject(sender: AnyObject) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
-        
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-        
-        // Save the context.
-        var error: NSError? = nil
-        if !context.save(&error) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //println("Unresolved error \(error), \(error.userInfo)")
-            abort()
-        }
+//        let context = self.fetchedResultsController.managedObjectContext
+//        let entity = self.fetchedResultsController.fetchRequest.entity!
+//        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
+//        
+//        // If appropriate, configure the new managed object.
+//        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+//        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
+//        
+//        // Save the context.
+//        var error: NSError? = nil
+//        if !context.save(&error) {
+//            // Replace this implementation with code to handle the error appropriately.
+//            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//            //println("Unresolved error \(error), \(error.userInfo)")
+//            abort()
+//        }
+        performSegueWithIdentifier("showAdd", sender: nil)
     }
     
     // MARK: - Table View

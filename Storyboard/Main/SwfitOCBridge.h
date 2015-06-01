@@ -12,5 +12,10 @@
 #import "PureLayout.h"
 #import "RosyWriterCapturePipeline.h"
 #import "OpenGLPixelBufferView.h"
+#import <ReactiveCocoa.h>
+#import <ReactiveViewModel.h>
+#import <libextobjc/extobjc.h>
+#import <TPKeyboardAvoidingScrollView.h>
+#import <RVMViewModel.h>
 
 #endif

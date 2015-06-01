@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        #if FOR_REVEAL
+            loadReveal()
+        #endif
         let tabbarController = self.window!.rootViewController as! UITabBarController
         let navigationController = tabbarController.viewControllers?.first as! UINavigationController
         let controller = navigationController.topViewController as! HomeViewController
@@ -115,6 +118,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func appearanceConfigure() {
         
     }
-
+    
+    // MARK: - Reveal
+    func loadReveal() {
+        if NSClassFromString("IBARevealLoader") == nil {
+            let revealLibName = "libReveal"
+            let revealLibExtension = "dylib"
+            var error: String?
+            
+            if let dylibPath = NSBundle.mainBundle().pathForResource(revealLibName, ofType: revealLibExtension) {
+                println("Loading dynamic library \(dylibPath)")
+                
+                let revealLib = dlopen(dylibPath, RTLD_NOW)
+                if revealLib == nil {
+                    error = String(UTF8String: dlerror())
+                }
+            } else {
+                error = "File not found."
+            }
+            
+            if error != nil {
+                UIAlertView(title: "Reveal library could not be loaded",
+                    message: "\(revealLibName).\(revealLibExtension) failed to load with error: \(error!)",
+                    delegate: nil,
+                    cancelButtonTitle: "OK").show()
+            }
+        }
+    }
 }
 
