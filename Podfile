@@ -7,6 +7,7 @@ target 'Storyboard' do
     pod 'libextobjc', '~> 0.4.1'
     pod 'ReactiveViewModel', '~> 0.3'
     pod 'TPKeyboardAvoiding', '~> 1.2.6'
+    pod 'UIImage+ImageWithColor', '~> 1.2'
 end
 
 target 'StoryboardTests' do
@@ -18,5 +19,6 @@ target 'Storyboard For Reveal' do
     pod 'libextobjc', '~> 0.4.1'
     pod 'ReactiveViewModel', '~> 0.3'
     pod 'TPKeyboardAvoiding', '~> 1.2.6'
+    pod 'UIImage+ImageWithColor', '~> 1.2'
 end
 

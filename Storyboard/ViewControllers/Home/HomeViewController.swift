@@ -51,7 +51,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //                (segue.destinationViewController as DetailViewController).detailItem = object
 //            }
         } else if segue.identifier == "showAdd" {
-            if let vc = segue.destinationViewController as? AddNewAlbumViewController {
+            let nc = segue.destinationViewController as? UINavigationController
+            if let vc = nc?.topViewController as? AddNewAlbumViewController {
                 var vm = AddNewAlbumViewModel()
                 vc.viewModel = vm
             }

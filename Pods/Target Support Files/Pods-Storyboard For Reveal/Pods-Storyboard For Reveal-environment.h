@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_TPKeyboardAvoiding 2
 #define COCOAPODS_VERSION_PATCH_TPKeyboardAvoiding 6
 
+// UIImage+ImageWithColor
+#define COCOAPODS_POD_AVAILABLE_UIImage_ImageWithColor
+#define COCOAPODS_VERSION_MAJOR_UIImage_ImageWithColor 1
+#define COCOAPODS_VERSION_MINOR_UIImage_ImageWithColor 2
+#define COCOAPODS_VERSION_PATCH_UIImage_ImageWithColor 0
+
 // libextobjc
 #define COCOAPODS_POD_AVAILABLE_libextobjc
 #define COCOAPODS_VERSION_MAJOR_libextobjc 0

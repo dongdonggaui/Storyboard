@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if FOR_REVEAL
             loadReveal()
         #endif
+        
+        // ui appreance
+        appearanceConfigure()
+        
         let tabbarController = self.window!.rootViewController as! UITabBarController
         let navigationController = tabbarController.viewControllers?.first as! UINavigationController
         let controller = navigationController.topViewController as! HomeViewController
@@ -116,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - ui appearance
     func appearanceConfigure() {
-        
+        UIBarButtonItem.appearance().tintColor = UIColor.orangeColor()
     }
     
     // MARK: - Reveal

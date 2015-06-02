@@ -106,12 +106,16 @@
 		097C46AB1AD4D7E500AB77B2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A41AD4D7E500AB77B2 /* NSArray+PureLayout.m */; };
 		097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C46A61AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m */; };
 		09C115651ACA5D6B002E40FF /* pl_wuhan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09C115641ACA5D6B002E40FF /* pl_wuhan.jpg */; };
+		09D063261B1DAE76007146F6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D063241B1DAE76007146F6 /* Album.swift */; };
+		09D063271B1DAE76007146F6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D063241B1DAE76007146F6 /* Album.swift */; };
+		09D063281B1DAE76007146F6 /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D063251B1DAE76007146F6 /* Medium.swift */; };
+		09D063291B1DAE76007146F6 /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D063251B1DAE76007146F6 /* Medium.swift */; };
 		09F88C771AD611A50096DAA2 /* SmallVideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */; };
 		09F88C781AD611A50096DAA2 /* SmallVideoCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F88C761AD611A50096DAA2 /* SmallVideoCaptureViewController.xib */; };
 		09F88C7C1AD61A510096DAA2 /* TQTwoSideProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F88C7B1AD61A510096DAA2 /* TQTwoSideProgressBar.swift */; };
-		31F74C6F1F460F7405255F5C /* libPods-Storyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4E879F2E89C4CF1225E882 /* libPods-Storyboard.a */; };
-		3314C65DCC6EA0B2BC09491E /* libPods-Storyboard For Reveal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EEFFA4299D1607F1AB70A6 /* libPods-Storyboard For Reveal.a */; };
+		B02FA98B65B7488278704742 /* libPods-Storyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F5FFA0E3EF9FED2E008684 /* libPods-Storyboard.a */; };
 		B2E0688AA1E25D131EB73C0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF347E97B82958E825B91A1 /* libPods.a */; };
+		C433D3A0B5E9E0EE9E9CD9DA /* libPods-Storyboard For Reveal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 283B55C04CD8119AEC1C05AF /* libPods-Storyboard For Reveal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,16 +198,18 @@
 		097C46A91AD4D7E500AB77B2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		097C46B01AD4D85700AB77B2 /* SwfitOCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwfitOCBridge.h; sourceTree = "<group>"; };
 		09C115641ACA5D6B002E40FF /* pl_wuhan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl_wuhan.jpg; sourceTree = "<group>"; };
+		09D063221B1D969B007146F6 /* Pods-Storyboard.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-Storyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Storyboard/Pods-Storyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		09D063231B1D969B007146F6 /* Pods-Storyboard.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-Storyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Storyboard/Pods-Storyboard.release.xcconfig"; sourceTree = "<group>"; };
+		09D063241B1DAE76007146F6 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		09D063251B1DAE76007146F6 /* Medium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medium.swift; sourceTree = "<group>"; };
 		09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallVideoCaptureViewController.swift; sourceTree = "<group>"; };
 		09F88C761AD611A50096DAA2 /* SmallVideoCaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallVideoCaptureViewController.xib; sourceTree = "<group>"; };
 		09F88C7B1AD61A510096DAA2 /* TQTwoSideProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQTwoSideProgressBar.swift; sourceTree = "<group>"; };
+		283B55C04CD8119AEC1C05AF /* libPods-Storyboard For Reveal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Storyboard For Reveal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2865C34708B9039F880EE694 /* Pods-Storyboard For Reveal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storyboard For Reveal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Storyboard For Reveal/Pods-Storyboard For Reveal.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF347E97B82958E825B91A1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B7081A6A4B075D5C69E1393 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B1EEFFA4299D1607F1AB70A6 /* libPods-Storyboard For Reveal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Storyboard For Reveal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD4E879F2E89C4CF1225E882 /* libPods-Storyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Storyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F5FFA0E3EF9FED2E008684 /* libPods-Storyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Storyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96CA1D32242F83344ABF97C /* Pods-Storyboard For Reveal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storyboard For Reveal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Storyboard For Reveal/Pods-Storyboard For Reveal.release.xcconfig"; sourceTree = "<group>"; };
-		F3A26FCF8E7BE8324C227E2C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E0688AA1E25D131EB73C0F /* libPods.a in Frameworks */,
-				31F74C6F1F460F7405255F5C /* libPods-Storyboard.a in Frameworks */,
+				B02FA98B65B7488278704742 /* libPods-Storyboard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3314C65DCC6EA0B2BC09491E /* libPods-Storyboard For Reveal.a in Frameworks */,
+				C433D3A0B5E9E0EE9E9CD9DA /* libPods-Storyboard For Reveal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +488,8 @@
 		09552BC71B1C46DC006B685D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				09D063241B1DAE76007146F6 /* Album.swift */,
+				09D063251B1DAE76007146F6 /* Medium.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -622,8 +630,8 @@
 			isa = PBXGroup;
 			children = (
 				4DF347E97B82958E825B91A1 /* libPods.a */,
-				BD4E879F2E89C4CF1225E882 /* libPods-Storyboard.a */,
-				B1EEFFA4299D1607F1AB70A6 /* libPods-Storyboard For Reveal.a */,
+				A2F5FFA0E3EF9FED2E008684 /* libPods-Storyboard.a */,
+				283B55C04CD8119AEC1C05AF /* libPods-Storyboard For Reveal.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -631,8 +639,8 @@
 		77A2E3B4BF60FC929B028097 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B7081A6A4B075D5C69E1393 /* Pods.debug.xcconfig */,
-				F3A26FCF8E7BE8324C227E2C /* Pods.release.xcconfig */,
+				09D063221B1D969B007146F6 /* Pods-Storyboard.debug.xcconfig */,
+				09D063231B1D969B007146F6 /* Pods-Storyboard.release.xcconfig */,
 				2865C34708B9039F880EE694 /* Pods-Storyboard For Reveal.debug.xcconfig */,
 				C96CA1D32242F83344ABF97C /* Pods-Storyboard For Reveal.release.xcconfig */,
 			);
@@ -880,6 +888,8 @@
 				091A2F671ACAC31A0014D07C /* RAMBounceAnimation.swift in Sources */,
 				09F88C771AD611A50096DAA2 /* SmallVideoCaptureViewController.swift in Sources */,
 				096EB4451AD7BF42009E765C /* RosyWriterCapturePipeline.m in Sources */,
+				09D063261B1DAE76007146F6 /* Album.swift in Sources */,
+				09D063281B1DAE76007146F6 /* Medium.swift in Sources */,
 				091A2F541ACA8E930014D07C /* PRSlideView.swift in Sources */,
 				097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */,
 				090813551AC96C07006C19FA /* StoryViewController.swift in Sources */,
@@ -928,6 +938,8 @@
 				09552B8A1B1C389D006B685D /* RAMBounceAnimation.swift in Sources */,
 				09552B8B1B1C389D006B685D /* SmallVideoCaptureViewController.swift in Sources */,
 				09552B8C1B1C389D006B685D /* RosyWriterCapturePipeline.m in Sources */,
+				09D063271B1DAE76007146F6 /* Album.swift in Sources */,
+				09D063291B1DAE76007146F6 /* Medium.swift in Sources */,
 				09552B8D1B1C389D006B685D /* PRSlideView.swift in Sources */,
 				09552B8E1B1C389D006B685D /* VideoViewController.swift in Sources */,
 				09552B8F1B1C389D006B685D /* StoryViewController.swift in Sources */,
@@ -1072,7 +1084,7 @@
 		};
 		092583131AC94A940026AECA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B7081A6A4B075D5C69E1393 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 09D063221B1D969B007146F6 /* Pods-Storyboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Storyboard/Info.plist;
@@ -1082,6 +1094,7 @@
 					"$(inherited)",
 					"-DUSE_OPENGL_RENDERER=1",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
@@ -1089,7 +1102,7 @@
 		};
 		092583141AC94A940026AECA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3A26FCF8E7BE8324C227E2C /* Pods.release.xcconfig */;
+			baseConfigurationReference = 09D063231B1D969B007146F6 /* Pods-Storyboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Storyboard/Info.plist;
@@ -1099,6 +1112,7 @@
 					"$(inherited)",
 					"-DUSE_OPENGL_RENDERER=1",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
@@ -1159,10 +1173,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dylibs",
 				);
-				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DUSE_OPENGL_RENDERER=1",
+				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "$(OTHER_LDFLAGS)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D FOR_REVEAL";
 				PRODUCT_NAME = "Storyboard copy";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
@@ -1185,10 +1202,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dylibs",
 				);
-				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DUSE_OPENGL_RENDERER=1",
+				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "$(OTHER_LDFLAGS)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D FOR_REVEAL";
 				PRODUCT_NAME = "Storyboard copy";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;

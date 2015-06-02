@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/ReactiveViewModel" "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/libextobjc"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/Public/ReactiveViewModel" -isystem "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding" -isystem "${PODS_ROOT}/Headers/Public/libextobjc"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Storyboard For Reveal-ReactiveCocoa" -l"Pods-Storyboard For Reveal-ReactiveViewModel" -l"Pods-Storyboard For Reveal-TPKeyboardAvoiding" -l"Pods-Storyboard For Reveal-libextobjc"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/ReactiveViewModel" "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/UIImage+ImageWithColor" "${PODS_ROOT}/Headers/Public/libextobjc"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/Public/ReactiveViewModel" -isystem "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding" -isystem "${PODS_ROOT}/Headers/Public/UIImage+ImageWithColor" -isystem "${PODS_ROOT}/Headers/Public/libextobjc"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Storyboard For Reveal-ReactiveCocoa" -l"Pods-Storyboard For Reveal-ReactiveViewModel" -l"Pods-Storyboard For Reveal-TPKeyboardAvoiding" -l"Pods-Storyboard For Reveal-UIImage+ImageWithColor" -l"Pods-Storyboard For Reveal-libextobjc" -framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

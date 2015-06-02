@@ -16,6 +16,7 @@
 #import <ReactiveViewModel.h>
 #import <libextobjc/extobjc.h>
 #import <TPKeyboardAvoidingScrollView.h>
-#import <RVMViewModel.h>
+#import <UITextField+RACSignalSupport.h>
+#import <UIImage+ImageWithColor.h>
 
 #endif
