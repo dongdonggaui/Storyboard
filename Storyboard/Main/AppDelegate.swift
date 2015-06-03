@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = tabbarController.viewControllers?.first as! UINavigationController
         let controller = navigationController.topViewController as! HomeViewController
         controller.managedObjectContext = self.managedObjectContext
+        controller.viewModel = HomeViewModel()
         return true
     }
 

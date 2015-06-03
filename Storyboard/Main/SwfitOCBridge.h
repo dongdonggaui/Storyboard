@@ -18,5 +18,7 @@
 #import <TPKeyboardAvoidingScrollView.h>
 #import <UITextField+RACSignalSupport.h>
 #import <UIImage+ImageWithColor.h>
+#import <ReactiveViewModel.h>
+#import "ASHCoreDataStack.h"
 
 #endif

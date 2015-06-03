@@ -13,6 +13,12 @@
 		090813511AC96540006C19FA /* pl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0908134F1AC96540006C19FA /* pl3.jpg */; };
 		090813521AC96540006C19FA /* pl4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 090813501AC96540006C19FA /* pl4.jpg */; };
 		090813551AC96C07006C19FA /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090813541AC96C07006C19FA /* StoryViewController.swift */; };
+		090C4B2F1B1EB0A80038BB2A /* AlbumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C4B2E1B1EB0A80038BB2A /* AlbumHelper.swift */; };
+		090C4B301B1EB0A80038BB2A /* AlbumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C4B2E1B1EB0A80038BB2A /* AlbumHelper.swift */; };
+		090C4B331B1ECA220038BB2A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C4B321B1ECA220038BB2A /* HomeViewModel.swift */; };
+		090C4B341B1ECA220038BB2A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C4B321B1ECA220038BB2A /* HomeViewModel.swift */; };
+		090C4B381B1ECE0D0038BB2A /* ASHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C4B371B1ECE0D0038BB2A /* ASHCoreDataStack.m */; };
+		090C4B391B1ECE0D0038BB2A /* ASHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C4B371B1ECE0D0038BB2A /* ASHCoreDataStack.m */; };
 		091A2F541ACA8E930014D07C /* PRSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091A2F521ACA8E930014D07C /* PRSlideView.swift */; };
 		091A2F551ACA8E930014D07C /* PRSlideViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091A2F531ACA8E930014D07C /* PRSlideViewPage.swift */; };
 		091A2F581ACA9F610014D07C /* TQViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091A2F571ACA9F610014D07C /* TQViewTransition.swift */; };
@@ -135,6 +141,10 @@
 		0908134F1AC96540006C19FA /* pl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl3.jpg; sourceTree = "<group>"; };
 		090813501AC96540006C19FA /* pl4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl4.jpg; sourceTree = "<group>"; };
 		090813541AC96C07006C19FA /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		090C4B2E1B1EB0A80038BB2A /* AlbumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumHelper.swift; sourceTree = "<group>"; };
+		090C4B321B1ECA220038BB2A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		090C4B361B1ECE0D0038BB2A /* ASHCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHCoreDataStack.h; sourceTree = "<group>"; };
+		090C4B371B1ECE0D0038BB2A /* ASHCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHCoreDataStack.m; sourceTree = "<group>"; };
 		091A2F521ACA8E930014D07C /* PRSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRSlideView.swift; sourceTree = "<group>"; };
 		091A2F531ACA8E930014D07C /* PRSlideViewPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRSlideViewPage.swift; sourceTree = "<group>"; };
 		091A2F571ACA9F610014D07C /* TQViewTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQViewTransition.swift; sourceTree = "<group>"; };
@@ -160,7 +170,7 @@
 		092583261AC9522B0026AECA /* pl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl2.jpg; sourceTree = "<group>"; };
 		092583291AC9522B0026AECA /* pl5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl5.jpg; sourceTree = "<group>"; };
 		092583301AC952C60026AECA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		09552BBE1B1C389D006B685D /* Storyboard copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storyboard copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09552BBE1B1C389D006B685D /* StoryboardForReveal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardForReveal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09552BC11B1C38FD006B685D /* StoryboardForReveal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryboardForReveal.plist; sourceTree = "<group>"; };
 		09552BC31B1C39F5006B685D /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libReveal.dylib; path = Dylibs/libReveal.dylib; sourceTree = SOURCE_ROOT; };
 		09552BCA1B1C47C1006B685D /* AddNewAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAlbumViewController.swift; sourceTree = "<group>"; };
@@ -258,9 +268,43 @@
 			path = Story;
 			sourceTree = "<group>";
 		};
+		090C4B2C1B1EB06A0038BB2A /* CoreDataHelper */ = {
+			isa = PBXGroup;
+			children = (
+				090C4B2D1B1EB08C0038BB2A /* AlbumHelper */,
+			);
+			path = CoreDataHelper;
+			sourceTree = "<group>";
+		};
+		090C4B2D1B1EB08C0038BB2A /* AlbumHelper */ = {
+			isa = PBXGroup;
+			children = (
+				090C4B2E1B1EB0A80038BB2A /* AlbumHelper.swift */,
+			);
+			path = AlbumHelper;
+			sourceTree = "<group>";
+		};
+		090C4B311B1EC9FC0038BB2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				090C4B321B1ECA220038BB2A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		090C4B351B1ECE0D0038BB2A /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				090C4B361B1ECE0D0038BB2A /* ASHCoreDataStack.h */,
+				090C4B371B1ECE0D0038BB2A /* ASHCoreDataStack.m */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
 		091A2F501ACA8E930014D07C /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				090C4B351B1ECE0D0038BB2A /* CoreDataStack */,
 				096EB4351AD7BF42009E765C /* AppleVideoCapturer */,
 				097C46A01AD4D7E500AB77B2 /* PureLayout */,
 				091A2F511ACA8E930014D07C /* PRSlideView */,
@@ -367,7 +411,7 @@
 			children = (
 				092582F01AC94A940026AECA /* Storyboard.app */,
 				092583081AC94A940026AECA /* StoryboardTests.xctest */,
-				09552BBE1B1C389D006B685D /* Storyboard copy.app */,
+				09552BBE1B1C389D006B685D /* StoryboardForReveal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -429,6 +473,7 @@
 		0925831E1AC94D170026AECA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				090C4B2C1B1EB06A0038BB2A /* CoreDataHelper */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -498,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				09552BDB1B1C5E7E006B685D /* AddNewAlbum */,
+				090C4B311B1EC9FC0038BB2A /* Home */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -704,7 +750,7 @@
 			);
 			name = "Storyboard For Reveal";
 			productName = Storyboard;
-			productReference = 09552BBE1B1C389D006B685D /* Storyboard copy.app */;
+			productReference = 09552BBE1B1C389D006B685D /* StoryboardForReveal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -889,12 +935,14 @@
 				09F88C771AD611A50096DAA2 /* SmallVideoCaptureViewController.swift in Sources */,
 				096EB4451AD7BF42009E765C /* RosyWriterCapturePipeline.m in Sources */,
 				09D063261B1DAE76007146F6 /* Album.swift in Sources */,
+				090C4B381B1ECE0D0038BB2A /* ASHCoreDataStack.m in Sources */,
 				09D063281B1DAE76007146F6 /* Medium.swift in Sources */,
 				091A2F541ACA8E930014D07C /* PRSlideView.swift in Sources */,
 				097C46961AD4BE4C00AB77B2 /* VideoViewController.swift in Sources */,
 				090813551AC96C07006C19FA /* StoryViewController.swift in Sources */,
 				097C46AB1AD4D7E500AB77B2 /* NSArray+PureLayout.m in Sources */,
 				092583221AC94D260026AECA /* ViewController.swift in Sources */,
+				090C4B331B1ECA220038BB2A /* HomeViewModel.swift in Sources */,
 				0925831F1AC94D170026AECA /* AppDelegate.swift in Sources */,
 				06092BE31ACADD0100FF320C /* GalleryViewController.swift in Sources */,
 				06092BE61ACAFD1300FF320C /* GalleryPage.swift in Sources */,
@@ -906,6 +954,7 @@
 				091A2F581ACA9F610014D07C /* TQViewTransition.swift in Sources */,
 				091A2F6B1ACAC31A0014D07C /* RAMTransitionItemAnimation.swift in Sources */,
 				092582F91AC94A940026AECA /* Storyboard.xcdatamodeld in Sources */,
+				090C4B2F1B1EB0A80038BB2A /* AlbumHelper.swift in Sources */,
 				097C46AC1AD4D7E500AB77B2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				092583311AC952C60026AECA /* HomeViewController.swift in Sources */,
 				09F88C7C1AD61A510096DAA2 /* TQTwoSideProgressBar.swift in Sources */,
@@ -939,12 +988,14 @@
 				09552B8B1B1C389D006B685D /* SmallVideoCaptureViewController.swift in Sources */,
 				09552B8C1B1C389D006B685D /* RosyWriterCapturePipeline.m in Sources */,
 				09D063271B1DAE76007146F6 /* Album.swift in Sources */,
+				090C4B391B1ECE0D0038BB2A /* ASHCoreDataStack.m in Sources */,
 				09D063291B1DAE76007146F6 /* Medium.swift in Sources */,
 				09552B8D1B1C389D006B685D /* PRSlideView.swift in Sources */,
 				09552B8E1B1C389D006B685D /* VideoViewController.swift in Sources */,
 				09552B8F1B1C389D006B685D /* StoryViewController.swift in Sources */,
 				09552B901B1C389D006B685D /* NSArray+PureLayout.m in Sources */,
 				09552B911B1C389D006B685D /* ViewController.swift in Sources */,
+				090C4B341B1ECA220038BB2A /* HomeViewModel.swift in Sources */,
 				09552B921B1C389D006B685D /* AppDelegate.swift in Sources */,
 				09552B931B1C389D006B685D /* GalleryViewController.swift in Sources */,
 				09552B941B1C389D006B685D /* GalleryPage.swift in Sources */,
@@ -956,6 +1007,7 @@
 				09552B9A1B1C389D006B685D /* TQViewTransition.swift in Sources */,
 				09552B9B1B1C389D006B685D /* RAMTransitionItemAnimation.swift in Sources */,
 				09552B9C1B1C389D006B685D /* Storyboard.xcdatamodeld in Sources */,
+				090C4B301B1EB0A80038BB2A /* AlbumHelper.swift in Sources */,
 				09552B9D1B1C389D006B685D /* NSLayoutConstraint+PureLayout.m in Sources */,
 				09552B9E1B1C389D006B685D /* HomeViewController.swift in Sources */,
 				09552B9F1B1C389D006B685D /* TQTwoSideProgressBar.swift in Sources */,
@@ -1157,6 +1209,7 @@
 			baseConfigurationReference = 2865C34708B9039F880EE694 /* Pods-Storyboard For Reveal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Luyang Huang (J98PX48X66)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1181,7 +1234,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D FOR_REVEAL";
-				PRODUCT_NAME = "Storyboard copy";
+				PRODUCT_NAME = StoryboardForReveal;
+				PROVISIONING_PROFILE = "358eefad-a666-4a7f-bc01-b58b121b4b5b";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
 			name = Debug;
@@ -1191,6 +1245,7 @@
 			baseConfigurationReference = C96CA1D32242F83344ABF97C /* Pods-Storyboard For Reveal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Luyang Huang (J98PX48X66)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1210,7 +1265,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D FOR_REVEAL";
-				PRODUCT_NAME = "Storyboard copy";
+				PRODUCT_NAME = StoryboardForReveal;
+				PROVISIONING_PROFILE = "358eefad-a666-4a7f-bc01-b58b121b4b5b";
 				SWIFT_OBJC_BRIDGING_HEADER = Storyboard/Main/SwfitOCBridge.h;
 			};
 			name = Release;

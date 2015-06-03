@@ -8,6 +8,7 @@ target 'Storyboard' do
     pod 'ReactiveViewModel', '~> 0.3'
     pod 'TPKeyboardAvoiding', '~> 1.2.6'
     pod 'UIImage+ImageWithColor', '~> 1.2'
+    pod 'ReactiveViewModel', '~> 0.3'
 end
 
 target 'StoryboardTests' do
@@ -20,5 +21,6 @@ target 'Storyboard For Reveal' do
     pod 'ReactiveViewModel', '~> 0.3'
     pod 'TPKeyboardAvoiding', '~> 1.2.6'
     pod 'UIImage+ImageWithColor', '~> 1.2'
+    pod 'ReactiveViewModel', '~> 0.3'
 end
 

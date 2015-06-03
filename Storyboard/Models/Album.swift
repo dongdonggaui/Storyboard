@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(Album)
 class Album: NSManagedObject {
 
     @NSManaged var name: String

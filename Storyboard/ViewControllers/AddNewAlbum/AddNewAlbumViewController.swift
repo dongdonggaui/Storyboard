@@ -43,7 +43,9 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
             })
             var imageSignal = RACObserve(vm, "image")
             RAC(imageView, "image").assignSignal(imageSignal)
-            RAC(navigationItem.rightBarButtonItem!, "enabled").assignSignal(RACObserve(vm, "canSubmit"))
+            RAC(self.navigationItem.rightBarButtonItem!, "enabled").assignSignal(RACSignal.combineLatest([RACObserve(vm, "title"), RACObserve(vm, "image")], reduce: { () -> AnyObject! in
+                return (self.titleTextField.text as NSString).length > 0 && (vm.image != nil)
+            }))
         }
     }
     
@@ -110,28 +112,22 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
     
     // MARK: - UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        viewModel!.image = image
-        imageView.image = image
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        picker.dismissViewControllerAnimated(true, completion: { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.viewModel!.setValue(image, forKey: "image")
+            })
+        })
     }
     
     // MARK: - Event Response
     func datePickerTapped() {
-        if pickerIsShowing {
-            return
-        }
-        pickerIsShowing = true
-        datePickerBottomConstraint?.constant = 0
-        view.setNeedsUpdateConstraints()
-        view.updateConstraintsIfNeeded()
-        UIView.animateWithDuration(0.25, animations: { () -> Void in
-            self.view.layoutIfNeeded()
-        })
+        showDatePicker()
     }
     
     func imagePickerTapped() {
         var actionSheet = UIActionSheet(title: "请选择", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "从相册选择", "拍照")
         actionSheet.showInView(view)
+        dismissDatePicker()
     }
     
     func didSingleTapped(tap: UITapGestureRecognizer) {
@@ -140,12 +136,14 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
         }
     }
     
-    func dismissViewController() {
-        dismissViewControllerAnimated(true, completion: nil)
+    func cancel() {
+        self.viewModel!.cancel()
+        self.dismissViewController()
     }
     
-    func addAlbum() {
-        viewModel!.insertNewObject()
+    func done() {
+        dismissDatePicker()
+        dismissViewController()
     }
 
     // MARK: - Private
@@ -161,13 +159,29 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
         scrollContentView.addSubview(imagePickerButton)
         scrollContentView.addSubview(imageView)
         
-        var cancelItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "dismissViewController")
+        var cancelItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancel")
         navigationItem.leftBarButtonItem = cancelItem
-        var addItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "addAlbum")
+        var addItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "done")
         navigationItem.rightBarButtonItem = addItem
     }
     
+    func showDatePicker() {
+        if pickerIsShowing {
+            return
+        }
+        pickerIsShowing = true
+        datePickerBottomConstraint?.constant = 0
+        view.setNeedsUpdateConstraints()
+        view.updateConstraintsIfNeeded()
+        UIView.animateWithDuration(0.25, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+    
     func dismissDatePicker() {
+        if !pickerIsShowing {
+            return
+        }
         datePickerBottomConstraint?.constant = datePickerHeight
         view.setNeedsUpdateConstraints()
         view.updateConstraintsIfNeeded()
@@ -176,6 +190,11 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
         }) { (finished) -> Void in
             self.pickerIsShowing = !finished
         }
+    }
+    
+    func dismissViewController() {
+        self.viewModel!.willDismiss()
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - Setters & Getters

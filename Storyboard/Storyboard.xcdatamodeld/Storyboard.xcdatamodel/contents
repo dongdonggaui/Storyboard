@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Album" representedClassName="PRODUCT_MODULE_NAME.Album" syncable="YES">
+    <entity name="Album" representedClassName="Album" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,7 +11,7 @@
     <entity name="Event" syncable="YES">
         <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="Medium" representedClassName="PRODUCT_MODULE_NAME.Medium" syncable="YES">
+    <entity name="Medium" representedClassName="Medium" syncable="YES">
         <attribute name="mediumData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="mediumPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
@@ -20,8 +20,8 @@
         <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="media" inverseEntity="Album" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Album" positionX="-63" positionY="-9" width="128" height="135"/>
+        <element name="Event" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Medium" positionX="-54" positionY="36" width="128" height="135"/>
     </elements>
 </model>
