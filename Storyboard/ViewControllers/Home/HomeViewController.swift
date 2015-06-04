@@ -24,18 +24,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        var backItem = UIBarButtonItem()
+        backItem.title = "返回"
+        self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.view.backgroundColor = UIColor.whiteColor()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.title = "Storyboard"
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
+        self.tableView.separatorStyle = .None
         
         if let vm = self.viewModel {
             vm.updatedContentSignal.subscribeNext({ (any) -> Void in

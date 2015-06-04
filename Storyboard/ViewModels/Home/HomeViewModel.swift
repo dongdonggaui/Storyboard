@@ -14,7 +14,7 @@ class HomeViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
     var updatedContentSignal: RACSignal {
         return _updatedContentSignal
     }
-    var albums: [AddNewAlbumViewModel] = [AddNewAlbumViewModel]()
+    var albums: [StoryViewModel] = [StoryViewModel]()
     
     var managedObjectContext: NSManagedObjectContext {
         return ASHCoreDataStack.defaultStack().managedObjectContext
@@ -64,6 +64,11 @@ class HomeViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
             //println("Unresolved error \(error), \(error.userInfo)")
             abort()
         }
+    }
+    
+    func storyViewModelForIndexPath(indexPath: NSIndexPath) -> StoryViewModel {
+        var viewModel = StoryViewModel(model: self.albumAtIndexPath(indexPath))
+        return viewModel;
     }
     
     // MARK: - Private

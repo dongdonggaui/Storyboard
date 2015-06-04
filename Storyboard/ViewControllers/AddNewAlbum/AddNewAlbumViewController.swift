@@ -24,6 +24,10 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
     var datePickerBottomConstraint: NSLayoutConstraint?
     
     var hasSetupConstraints = false
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,6 +152,7 @@ class AddNewAlbumViewController: UIViewController, UIScrollViewDelegate, UIActio
 
     // MARK: - Private
     func setupUI() {
+        self.title = "添加专辑"
         let tap = UITapGestureRecognizer(target: self, action: "didSingleTapped:")
         view.addGestureRecognizer(tap)
         view.addSubview(scrollView)

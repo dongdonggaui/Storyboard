@@ -122,6 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - ui appearance
     func appearanceConfigure() {
         UIBarButtonItem.appearance().tintColor = UIColor.orangeColor()
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
     }
     
     // MARK: - Reveal

@@ -9,6 +9,8 @@ target 'Storyboard' do
     pod 'TPKeyboardAvoiding', '~> 1.2.6'
     pod 'UIImage+ImageWithColor', '~> 1.2'
     pod 'ReactiveViewModel', '~> 0.3'
+    pod 'pop', '~> 1.0.7'
+    pod 'XHRealTimeBlur', '~> 1.7'
 end
 
 target 'StoryboardTests' do
@@ -22,5 +24,7 @@ target 'Storyboard For Reveal' do
     pod 'TPKeyboardAvoiding', '~> 1.2.6'
     pod 'UIImage+ImageWithColor', '~> 1.2'
     pod 'ReactiveViewModel', '~> 0.3'
+    pod 'pop', '~> 1.0.7'
+    pod 'XHRealTimeBlur', '~> 1.7'
 end
 

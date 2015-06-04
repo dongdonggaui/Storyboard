@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_UIImage_ImageWithColor 2
 #define COCOAPODS_VERSION_PATCH_UIImage_ImageWithColor 0
 
+// XHRealTimeBlur
+#define COCOAPODS_POD_AVAILABLE_XHRealTimeBlur
+#define COCOAPODS_VERSION_MAJOR_XHRealTimeBlur 1
+#define COCOAPODS_VERSION_MINOR_XHRealTimeBlur 7
+#define COCOAPODS_VERSION_PATCH_XHRealTimeBlur 0
+
 // libextobjc
 #define COCOAPODS_POD_AVAILABLE_libextobjc
 #define COCOAPODS_VERSION_MAJOR_libextobjc 0
@@ -125,4 +131,10 @@
 #define COCOAPODS_VERSION_MAJOR_libextobjc_UmbrellaHeader 0
 #define COCOAPODS_VERSION_MINOR_libextobjc_UmbrellaHeader 4
 #define COCOAPODS_VERSION_PATCH_libextobjc_UmbrellaHeader 1
+
+// pop
+#define COCOAPODS_POD_AVAILABLE_pop
+#define COCOAPODS_VERSION_MAJOR_pop 1
+#define COCOAPODS_VERSION_MINOR_pop 0
+#define COCOAPODS_VERSION_PATCH_pop 7
 
