@@ -102,10 +102,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow() {
-//                let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
-//                (segue.destinationViewController as DetailViewController).detailItem = object
-//            }
+            var indexPath = sender as! NSIndexPath
+            let storyViewModel = self.viewModel!.storyViewModelForIndexPath(indexPath)
+            let vc = segue.destinationViewController as! StoryViewController
+            vc.viewModel = storyViewModel
         } else if segue.identifier == "showAdd" {
             let album = NSEntityDescription.insertNewObjectForEntityForName("Album", inManagedObjectContext: ASHCoreDataStack.defaultStack().managedObjectContext) as! Album
             
@@ -155,7 +155,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("showDetail", sender: nil)
+        self.performSegueWithIdentifier("showDetail", sender: indexPath)
     }
     
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {

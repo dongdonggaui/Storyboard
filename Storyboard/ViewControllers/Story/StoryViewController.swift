@@ -53,20 +53,24 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.orangeColor()
         let transition = TQTransition(navigationController: self.navigationController!)
         self.navigationController!.delegate = transition
         self.transition = transition
-
+        
         self.segmentedControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 150.0
         self.tableView.registerClass(NSClassFromString("UITableViewHeaderFooterView"), forHeaderFooterViewReuseIdentifier: "header")
-        self.tableView.registerClass(NSClassFromString("StoryMediumCell"), forCellReuseIdentifier: "Cell")
+//        self.tableView.registerClass(NSClassFromString("StoryMediumCell"), forCellReuseIdentifier: "Cell")
         self.tableView.separatorStyle = .None
 //        self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension
         
         self.view.addSubview(self.addSegmentButton)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController!.delegate = nil
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,6 +88,21 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.updateViewConstraints()
     }
     
+    // MARK: - Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showAddAarticle" {
+            let article = NSEntityDescription.insertNewObjectForEntityForName("Medium", inManagedObjectContext: ASHCoreDataStack.defaultStack().managedObjectContext) as! Medium
+            
+            let nc = segue.destinationViewController as? UINavigationController
+            if let vc = nc?.topViewController as? AddNewArticleViewController {
+                var vm = AddNewArticleViewModel(model: article)
+                vm.inserting = true
+                vc.viewModel = vm
+            }
+        }
+    }
+    
     // MARK: - Actions
     func segmentedControlValueChanged(sender: UISegmentedControl) {
         self.tableView.reloadData()
@@ -93,17 +112,41 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
     // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if self.segmentedControl.selectedSegmentIndex == 1 {
+            return 1
+        }
         return self.viewModel?.numberOfSections() ?? 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.segmentedControl.selectedSegmentIndex == 1 {
+            return 5
+        }
         return self.viewModel?.numberOfItemsInSection(section) ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-        self.configureCell(cell, atIndexPath: indexPath)
-        return cell
+        if self.segmentedControl.selectedSegmentIndex == 1 {
+            var cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell", forIndexPath: indexPath) as! UITableViewCell
+            self.configureCategoryCell(cell, forIndexPath: indexPath)
+            return cell
+        }
+        
+        var identifier: String = "Cell"
+        var cell: UITableViewCell? = nil
+        if let vm = self.viewModel {
+            if vm.mediumTypeForIndexPath(indexPath) == 0 {
+                identifier = "ArticleCell"
+                cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! StoryArticleCell
+                self.configureArticleCell(cell as! StoryArticleCell, forIndexPath: indexPath)
+            } else {
+                identifier = "TimelineCell"
+                cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! TimeLineCell
+                self.configureCell(cell!, atIndexPath: indexPath)
+            }
+        }
+        
+        return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -120,57 +163,6 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.performSegueWithIdentifier("showAudeos", sender: nil)
             }
         }
-    }
-    
-    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        var medium = self.viewModel?.mediumAtIndexPath(indexPath)
-        if self.viewModel?.displayStyle == .Timeline {
-            
-        } else if self.viewModel?.displayStyle == .Category {
-            
-        }
-//        if self.segmentedControl.selectedSegmentIndex == 1 {
-//            if indexPath.row == 0 {
-//                cell.textLabel!.text = "照片"
-//            } else if indexPath.row == 1 {
-//                cell.textLabel!.text = "文章"
-//            } else if indexPath.row == 2 {
-//                cell.textLabel!.text = "小视频"
-//            } else if indexPath.row == 3 {
-//                cell.textLabel!.text = "视频"
-//            } else {
-//                cell.textLabel!.text = "音频"
-//            }
-//            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-//        } else {
-//            let timeLineCell = cell as! TimeLineCell
-//            let time = NSDate().description
-//            timeLineCell.timeLabel.text = time;
-//            timeLineCell.selectionStyle = UITableViewCellSelectionStyle.None
-//            var location = "武汉"
-//            var address = "武汉天河国际机场"
-//            var description = "要出发了，好嗨森"
-//            if indexPath.row == 0 {
-//                timeLineCell.timeLineImageView.image = UIImage(named: "pl_wuhan.jpg")
-//            } else {
-//                location = "马累"
-//                address = "Male International Airport"
-//                description = "顺利到达"
-//                timeLineCell.timeLineImageView.image = UIImage(named: "pl1.jpg")
-//            }
-//            let date = NSString(format: "第\(indexPath.row + 1)天 \(location)")
-//            timeLineCell.addressLabel.text = address
-//            timeLineCell.descriptionLabel.text = description
-//            timeLineCell.tapAction = {
-//                println("tapped at indexPath \(indexPath)")
-//                self.selectedIndexPath = indexPath
-//                let vc = GalleryViewController(nibName: "GalleryViewController", bundle: nil)
-//                vc.image = timeLineCell.timeLineImageView.image
-//                vc.currentImageIndex = indexPath.row
-//                vc.totalImageCount = 5
-//                self.navigationController!.pushViewController(vc, animated: true)
-//            }
-//        }
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -257,9 +249,64 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
         var popMenu = PopMenu(frame: self.view.bounds, items: items)
         var block: testBlock = { (item: MenuItem!) -> Void in
             println("tapped at \(item.index)")
+            if 0 == item.index {
+                self.performSegueWithIdentifier("showAddAarticle", sender: nil)
+            }
         }
         popMenu.didSelectedItemCompletion = block
         popMenu.showMenuAtView(UIApplication.sharedApplication().keyWindow)
+    }
+    
+    // MARK: - Private
+    private func configureArticleCell(cell: StoryArticleCell, forIndexPath indexPath: NSIndexPath) {
+        cell.articleTitleLabel.text = self.viewModel?.titleAtIndexPath(indexPath)
+        cell.articleTimeLabel.text = self.viewModel?.dateAtIndexPath(indexPath).description
+        cell.articleContentLabel.text = self.viewModel?.contentForIndexPath(indexPath)
+    }
+    
+    private func configureCategoryCell(cell: UITableViewCell, forIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 0 {
+            cell.textLabel!.text = "照片"
+        } else if indexPath.row == 1 {
+            cell.textLabel!.text = "文章"
+        } else if indexPath.row == 2 {
+            cell.textLabel!.text = "小视频"
+        } else if indexPath.row == 3 {
+            cell.textLabel!.text = "视频"
+        } else {
+            cell.textLabel!.text = "音频"
+        }
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+    }
+    
+    private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+        let timeLineCell = cell as! TimeLineCell
+        let time = NSDate().description
+        timeLineCell.timeLabel.text = time;
+        timeLineCell.selectionStyle = UITableViewCellSelectionStyle.None
+        var location = "武汉"
+        var address = "武汉天河国际机场"
+        var description = "要出发了，好嗨森"
+        if indexPath.row == 0 {
+            timeLineCell.timeLineImageView.image = UIImage(named: "pl_wuhan.jpg")
+        } else {
+            location = "马累"
+            address = "Male International Airport"
+            description = "顺利到达"
+            timeLineCell.timeLineImageView.image = UIImage(named: "pl1.jpg")
+        }
+        let date = NSString(format: "第\(indexPath.row + 1)天 \(location)")
+        timeLineCell.addressLabel.text = address
+        timeLineCell.descriptionLabel.text = description
+        timeLineCell.tapAction = {
+            println("tapped at indexPath \(indexPath)")
+            self.selectedIndexPath = indexPath
+            let vc = GalleryViewController(nibName: "GalleryViewController", bundle: nil)
+            vc.image = timeLineCell.timeLineImageView.image
+            vc.currentImageIndex = indexPath.row
+            vc.totalImageCount = 5
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     // MARK: - Getters

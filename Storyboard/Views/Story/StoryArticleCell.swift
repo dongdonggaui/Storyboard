@@ -14,7 +14,8 @@ class StoryArticleCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.setupUI()
+        self.setNeedsUpdateConstraints()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -25,7 +26,7 @@ class StoryArticleCell: UITableViewCell {
     
     override func updateConstraints() {
         if !self.hasSetupConstraints {
-            self.articleTitleLabel.autoPinEdgeToSuperviewEdge(.Left withInset: 10)
+            self.articleTitleLabel.autoPinEdgeToSuperviewEdge(.Left, withInset: 10)
             self.articleTitleLabel.autoPinEdgeToSuperviewEdge(.Right, withInset: 10)
             self.articleTitleLabel.autoPinEdgeToSuperviewEdge(.Top, withInset: 5)
             self.articleTimeLabel.autoPinEdge(.Left, toEdge: .Left, ofView: self.articleTitleLabel)
@@ -55,7 +56,7 @@ class StoryArticleCell: UITableViewCell {
             _articleTitleLabel = UILabel()
             _articleTitleLabel!.font = UIFont.boldSystemFontOfSize(16)
         }
-        return _articleTitleLabel
+        return _articleTitleLabel!
     }
     
     var articleTimeLabel: UILabel {
@@ -63,7 +64,7 @@ class StoryArticleCell: UITableViewCell {
             _articleTimeLabel = UILabel()
             _articleTimeLabel!.font = UIFont.systemFontOfSize(12)
         }
-        return _articleTimeLabel
+        return _articleTimeLabel!
     }
     
     var articleContentLabel: UILabel {
@@ -71,6 +72,6 @@ class StoryArticleCell: UITableViewCell {
             _articleContentLabel = UILabel()
             _articleContentLabel!.font = UIFont.systemFontOfSize(14)
         }
-        return _articleContentLabel
+        return _articleContentLabel!
     }
 }

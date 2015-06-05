@@ -57,6 +57,13 @@
 		0925832B1AC9522B0026AECA /* pl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092583261AC9522B0026AECA /* pl2.jpg */; };
 		0925832E1AC9522B0026AECA /* pl5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092583291AC9522B0026AECA /* pl5.jpg */; };
 		092583311AC952C60026AECA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092583301AC952C60026AECA /* HomeViewController.swift */; };
+		0945A35D1B2148BB007AE8E9 /* StoryArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090E9E681B2035AE008D05F4 /* StoryArticleCell.swift */; };
+		0945A35E1B2148BB007AE8E9 /* StoryAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090E9E6A1B2035BD008D05F4 /* StoryAudioCell.swift */; };
+		0945A35F1B2148BB007AE8E9 /* StoryVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090E9E6C1B2035DD008D05F4 /* StoryVideoCell.swift */; };
+		0945A3611B2179FA007AE8E9 /* AddNewArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945A3601B2179FA007AE8E9 /* AddNewArticleViewController.swift */; };
+		0945A3621B217D52007AE8E9 /* AddNewArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945A3601B2179FA007AE8E9 /* AddNewArticleViewController.swift */; };
+		0945A3641B217DBD007AE8E9 /* AddNewArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945A3631B217DBD007AE8E9 /* AddNewArticleViewModel.swift */; };
+		0945A3651B217E1D007AE8E9 /* AddNewArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945A3631B217DBD007AE8E9 /* AddNewArticleViewModel.swift */; };
 		09552B8A1B1C389D006B685D /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091A2F5C1ACAC31A0014D07C /* RAMBounceAnimation.swift */; };
 		09552B8B1B1C389D006B685D /* SmallVideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F88C751AD611A50096DAA2 /* SmallVideoCaptureViewController.swift */; };
 		09552B8C1B1C389D006B685D /* RosyWriterCapturePipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 096EB4371AD7BF42009E765C /* RosyWriterCapturePipeline.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -201,6 +208,8 @@
 		092583261AC9522B0026AECA /* pl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl2.jpg; sourceTree = "<group>"; };
 		092583291AC9522B0026AECA /* pl5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl5.jpg; sourceTree = "<group>"; };
 		092583301AC952C60026AECA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0945A3601B2179FA007AE8E9 /* AddNewArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewArticleViewController.swift; sourceTree = "<group>"; };
+		0945A3631B217DBD007AE8E9 /* AddNewArticleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewArticleViewModel.swift; sourceTree = "<group>"; };
 		09552BBE1B1C389D006B685D /* StoryboardForReveal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardForReveal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09552BC11B1C38FD006B685D /* StoryboardForReveal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StoryboardForReveal.plist; sourceTree = "<group>"; };
 		09552BC31B1C39F5006B685D /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libReveal.dylib; path = Dylibs/libReveal.dylib; sourceTree = SOURCE_ROOT; };
@@ -310,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				090813541AC96C07006C19FA /* StoryViewController.swift */,
+				0945A3601B2179FA007AE8E9 /* AddNewArticleViewController.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -363,6 +373,7 @@
 			children = (
 				090E9E6F1B203A97008D05F4 /* StoryViewModel.swift */,
 				090E9E721B2043D5008D05F4 /* MediumViewModel.swift */,
+				0945A3631B217DBD007AE8E9 /* AddNewArticleViewModel.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -1017,8 +1028,10 @@
 				092583221AC94D260026AECA /* ViewController.swift in Sources */,
 				090C4B331B1ECA220038BB2A /* HomeViewModel.swift in Sources */,
 				0925831F1AC94D170026AECA /* AppDelegate.swift in Sources */,
+				0945A3611B2179FA007AE8E9 /* AddNewArticleViewController.swift in Sources */,
 				06092BE31ACADD0100FF320C /* GalleryViewController.swift in Sources */,
 				06092BE61ACAFD1300FF320C /* GalleryPage.swift in Sources */,
+				0945A3641B217DBD007AE8E9 /* AddNewArticleViewModel.swift in Sources */,
 				0906E8CC1B1FF0F400996D2B /* MenuItem.m in Sources */,
 				096EB4531AD7C167009E765C /* TinyVideoCaptureViewController.swift in Sources */,
 				0906E8CE1B1FF0F400996D2B /* PopMenu.m in Sources */,
@@ -1064,11 +1077,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09552B8A1B1C389D006B685D /* RAMBounceAnimation.swift in Sources */,
+				0945A35E1B2148BB007AE8E9 /* StoryAudioCell.swift in Sources */,
 				09552B8B1B1C389D006B685D /* SmallVideoCaptureViewController.swift in Sources */,
 				09552B8C1B1C389D006B685D /* RosyWriterCapturePipeline.m in Sources */,
 				09D063271B1DAE76007146F6 /* Album.swift in Sources */,
 				090C4B391B1ECE0D0038BB2A /* ASHCoreDataStack.m in Sources */,
 				09D063291B1DAE76007146F6 /* Medium.swift in Sources */,
+				0945A35F1B2148BB007AE8E9 /* StoryVideoCell.swift in Sources */,
 				09552B8D1B1C389D006B685D /* PRSlideView.swift in Sources */,
 				09552B8E1B1C389D006B685D /* VideoViewController.swift in Sources */,
 				0906E8CB1B1FF0F400996D2B /* MenuButton.m in Sources */,
@@ -1081,6 +1096,7 @@
 				09552B941B1C389D006B685D /* GalleryPage.swift in Sources */,
 				0906E8CD1B1FF0F400996D2B /* MenuItem.m in Sources */,
 				090E9E741B2043D5008D05F4 /* MediumViewModel.swift in Sources */,
+				0945A3651B217E1D007AE8E9 /* AddNewArticleViewModel.swift in Sources */,
 				09552B951B1C389D006B685D /* TinyVideoCaptureViewController.swift in Sources */,
 				0906E8CF1B1FF0F400996D2B /* PopMenu.m in Sources */,
 				09552B961B1C389D006B685D /* RAMAnimatedTabBarController.swift in Sources */,
@@ -1105,6 +1121,8 @@
 				09552BDE1B1C5EB1006B685D /* AddNewAlbumViewModel.swift in Sources */,
 				09552BA51B1C389D006B685D /* RosyWriterOpenGLRenderer.m in Sources */,
 				09552BDA1B1C515D006B685D /* ReactiveCocoaBindings.swift in Sources */,
+				0945A35D1B2148BB007AE8E9 /* StoryArticleCell.swift in Sources */,
+				0945A3621B217D52007AE8E9 /* AddNewArticleViewController.swift in Sources */,
 				09552BCC1B1C47C1006B685D /* AddNewAlbumViewController.swift in Sources */,
 				09552BA61B1C389D006B685D /* RAMItemAnimationProtocol.swift in Sources */,
 				09552BA71B1C389D006B685D /* ShaderUtilities.c in Sources */,

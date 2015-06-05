@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(Medium)
 class Medium: NSManagedObject {
 
     @NSManaged var type: NSNumber
@@ -16,6 +17,7 @@ class Medium: NSManagedObject {
     @NSManaged var time: NSDate
     @NSManaged var mediumData: NSData
     @NSManaged var mediumPath: String
-    @NSManaged var album: NSManagedObject
+    @NSManaged var content: String
+    @NSManaged var dayIndex: NSNumber
 
 }

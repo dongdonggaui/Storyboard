@@ -52,6 +52,12 @@ class HomeViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
         return album.date
     }
     
+    func storyViewModelForIndexPath(indexPath: NSIndexPath) -> StoryViewModel {
+        let album = self.albumAtIndexPath(indexPath)
+        let storyViewModel = StoryViewModel(model: album)
+        return storyViewModel
+    }
+    
     func deleteObjectAtIndexPath(indexPath: NSIndexPath) {
         var object: NSManagedObject = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
         var context = self.fetchedResultsController.managedObjectContext
@@ -64,11 +70,6 @@ class HomeViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
             //println("Unresolved error \(error), \(error.userInfo)")
             abort()
         }
-    }
-    
-    func storyViewModelForIndexPath(indexPath: NSIndexPath) -> StoryViewModel {
-        var viewModel = StoryViewModel(model: self.albumAtIndexPath(indexPath))
-        return viewModel;
     }
     
     // MARK: - Private

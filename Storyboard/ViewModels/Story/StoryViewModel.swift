@@ -9,12 +9,6 @@
 import UIKit
 import CoreData
 
-enum StoryDisplayStyle : Int {
-    
-    case Timeline
-    case Category
-}
-
 class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
     lazy private var _updatedContentSignal: RACSignal = RACSubject()
     var updatedContentSignal: RACSignal {
@@ -24,7 +18,6 @@ class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
     var model: Album {
         return _model
     }
-    var displayStyle: StoryDisplayStyle = .Timeline
     
     var managedObjectContext: NSManagedObjectContext {
         return ASHCoreDataStack.defaultStack().managedObjectContext
@@ -45,28 +38,22 @@ class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
     
     func numberOfItemsInSection(section: Int) -> Int {
         let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
-        return sectionInfo.numberOfObjects
+        return sectionInfo.numberOfObjects ?? 0
     }
     
-    func cellIdentifierForIndexPath(indexPath: NSIndexPath) -> String {
-        var identifier = "cell"
-        switch self.displayStyle {
-        case .Category:
-            identifier = "CategoryCell"
-        case .Timeline:
-            var medium = self.mediumAtIndexPath(indexPath)
-            if medium.type.integerValue == 0 {
-                identifier = "ArticleCell"
-            } else {
-                identifier = "TimeLineCell"
-            }
-        }
-        return identifier
+    func mediumTypeForIndexPath(indexPath: NSIndexPath) -> Int {
+        var album = self.mediumAtIndexPath(indexPath)
+        return album.type.integerValue
     }
     
     func titleAtIndexPath(indexPath: NSIndexPath) -> String {
         var album = self.mediumAtIndexPath(indexPath)
         return album.title
+    }
+    
+    func contentForIndexPath(indexPath: NSIndexPath) -> String {
+        var album = self.mediumAtIndexPath(indexPath)
+        return album.content
     }
     
 //    func imageAtIndexPath(indexPath: NSIndexPath) -> UIImage? {
@@ -94,7 +81,7 @@ class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
     }
     
     // MARK: - Private
-    func mediumAtIndexPath(indexPath: NSIndexPath) -> Medium {
+    private func mediumAtIndexPath(indexPath: NSIndexPath) -> Medium {
         return self.fetchedResultsController.objectAtIndexPath(indexPath) as! Medium
     }
     
@@ -105,7 +92,7 @@ class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
     }
     
     func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
-        var dic: Dictionary<String, AnyObject!> = Dictionary<String, AnyObject!>()
+        var dic: [String: AnyObject] = [String: AnyObject]()
         dic["type"] = "sction"
         dic["section"] = NSNumber(integer: sectionIndex)
         switch type {
@@ -162,9 +149,11 @@ class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
+        let predicate = NSPredicate(format: "SELF.album.name == %@", argumentArray: [self.model.name])
+        
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Medium")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: "dayIndex", cacheName: "Medium")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
@@ -174,6 +163,7 @@ class StoryViewModel: RVMViewModel, NSFetchedResultsControllerDelegate {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             println("Unresolved error \(error), \(error?.userInfo)")
         }
+        println("fetch result --> \(_fetchedResultsController!.fetchedObjects)")
         
         return _fetchedResultsController!
     }

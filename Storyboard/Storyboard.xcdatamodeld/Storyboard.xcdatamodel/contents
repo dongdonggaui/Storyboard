@@ -6,22 +6,22 @@
         <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tags" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="media" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Medium" inverseName="album" inverseEntity="Medium" syncable="YES"/>
     </entity>
     <entity name="Event" syncable="YES">
         <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Medium" representedClassName="Medium" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dayIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="mediumData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="mediumPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="media" inverseEntity="Album" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Album" positionX="-63" positionY="-9" width="128" height="135"/>
+        <element name="Album" positionX="-63" positionY="-9" width="128" height="118"/>
         <element name="Event" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Medium" positionX="-54" positionY="36" width="128" height="135"/>
+        <element name="Medium" positionX="-54" positionY="36" width="128" height="148"/>
     </elements>
 </model>

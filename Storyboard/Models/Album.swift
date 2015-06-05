@@ -17,6 +17,5 @@ class Album: NSManagedObject {
     @NSManaged var image: NSData
     @NSManaged var imagePath: String
     @NSManaged var tags: String
-    @NSManaged var media: NSOrderedSet
 
 }
