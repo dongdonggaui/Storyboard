@@ -66,6 +66,60 @@ class StoryViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension
         
         self.view.addSubview(self.addSegmentButton)
+        
+        // view update binding
+        if let vm = self.viewModel {
+            vm.updatedContentSignal.subscribeNext({ (any) -> Void in
+                if let signal: String = (any as? String) {
+                    if signal == "will" {
+                        self.tableView.beginUpdates()
+                    } else if signal == "did" {
+                        self.tableView.endUpdates()
+                    }
+                } else if let dic: Dictionary<String, AnyObject> = (any as? Dictionary<String, AnyObject>) {
+                    let type = dic["type"] as! String
+                    let changeType = dic["changeType"] as! String
+                    if type == "section" {
+                        var sectionIndex = (dic["section"] as! NSNumber).integerValue
+                        switch changeType {
+                        case "insert":
+                            self.tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+                        case "delete":
+                            self.tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+                        default:
+                            return
+                        }
+                    } else if type == "indexPath" {
+                        var newIndexPath: NSIndexPath? = dic["newIndexPath"] as? NSIndexPath
+                        var indexPath: NSIndexPath? = dic["indexPath"] as? NSIndexPath
+                        switch changeType {
+                        case "insert":
+                            self.tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
+                        case "delete":
+                            self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+                        case "update":
+                            if self.segmentedControl.selectedSegmentIndex == 1 {
+                                return
+                            }
+                            
+                            if let vm = self.viewModel {
+                                if vm.mediumTypeForIndexPath(indexPath!) == 0 {
+                                    self.configureArticleCell(self.tableView.cellForRowAtIndexPath(indexPath!)! as! StoryArticleCell, forIndexPath: indexPath!)
+                                } else {
+                                    self.configureCell(self.tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
+                                }
+                            }
+                            
+                        case "move":
+                            self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+                            self.tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
+                        default:
+                            return
+                        }
+                    }
+                }
+            })
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
